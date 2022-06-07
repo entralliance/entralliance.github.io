@@ -1,5 +1,5 @@
 This repository contains the documentation for ENTR.
-View the documentation at [entralliance.github.io](entralliance.github.io)
+View the documentation at [entralliance.github.io](https://entralliance.github.io)
 
 ## Quickstart
 
@@ -21,4 +21,4 @@ Finally, open the HTML that is built in `./_build/html/index.html` with your web
 
 This documentation is automatically built and served through Github Pages using the `gh_pages` branch. This is configured in `.github/workflows/gh-pages-deploy.yml`
 
-View the documentation live at [entralliance.github.io](entralliance.github.io)
+View the documentation live at [entralliance.github.io](https://entralliance.github.io)
