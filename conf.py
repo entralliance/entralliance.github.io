@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'entr_docs'
+project = 'ENTR Data Environment'
 copyright = '2022, ENTR Alliance'
 author = 'ENTR Alliance'
 
