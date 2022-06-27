@@ -13,6 +13,9 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import nbmerge
+
+from urllib.request import urlretrieve
 
 
 # -- Project information -----------------------------------------------------
@@ -31,6 +34,7 @@ release = '0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "nbsphinx",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -40,7 +44,6 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -53,3 +56,20 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# -- Copy external documentation files ---------------------------------------
+
+urlretrieve (
+    "https://raw.githubusercontent.com/entralliance/OpenOA/main/examples/entr/02_plant_aep_analysis_entr.ipynb",
+    "02_plant_aep_analysis.ipynb"
+)
+
+# Merge example Notebooks into one notebook to keep the required structure
+new_nb = nbmerge.merge_notebooks(
+    "./",
+    (
+        "./examples_intro.ipynb",
+        "./02_plant_aep_analysis.ipynb",
+    ),
+)
+nbmerge.write_notebook(new_nb, "./examples_combined.ipynb")

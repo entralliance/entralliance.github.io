@@ -25,6 +25,7 @@ The ENTR data environment is a distribution of existing tools, frameworks, and s
    openoa_examples.rst
    data_integration.rst
    contributing.rst
+   examples_combined
 
 
 ..
