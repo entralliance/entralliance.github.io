@@ -5,3 +5,4 @@ nbmerge==0.0.4
 nbsphinx==0.8.*
 markupsafe==2.0.1
 pygments>=2.4.1
+pandoc
