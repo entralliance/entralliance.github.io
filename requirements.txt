@@ -1,3 +1,5 @@
+
+ipython==7.x
 sphinx>=5.0,<6.0
 nbmerge==0.0.4
 nbsphinx==0.8.*
