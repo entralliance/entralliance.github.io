@@ -14,9 +14,10 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation Process" href="install.html" />
+    <link rel="next" title="Installation Process and Development Guide" href="install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,14 +36,22 @@
             
   <section id="entr-alliance-renewable-energy-data-environment">
 <h1>ENTR Alliance Renewable Energy Data Environment<a class="headerlink" href="#entr-alliance-renewable-energy-data-environment" title="Permalink to this heading">¶</a></h1>
-<p>The ENTR data environment is a distribution of existing tools, frameworks, and standards, packaged together to enable efficient analysis of renewable energy data. The ENTR environment consists of the ENTR runtime, ENTR warehouse, and OpenOA operational analysis Python package…</p>
+<p>The ENTR data environment is a distribution of existing tools, frameworks, and standards, packaged together to enable efficient analysis of operational wind energy data. The ENTR environment consists of the ENTR runtime, ENTR warehouse, and OpenOA operational analysis Python package, all integrated into an easy-to-run Docker container. These copmonents are provided as separate repositories maintained by the ENTR Alliance.</p>
+<p>TODO: few sentences about runtime and what it is used for.</p>
+<p>TODO: few sentences about warehouse and what it is used for.</p>
+<p>The <a class="reference external" href="https://github.com/entralliance/OpenOA">Open Operational Assessment (OpenOA) Python package</a> is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse. OpenOA consists of modules for organizing different types of data (e.g., revenue meter, supervisory control and data acquisition (SCADA), meteorological tower, and reanalysis), low-level data analysis toolkits (e.g., filtering, power curve fitting), and high-level operational assessment methods (such as long-term energy production estimation). OpenOA is maintained and primarily developed by the National Renewable Energy laboratory (<a class="reference external" href="https://www.nrel.gov/wind/openoa.html">more information</a>).</p>
+<p>TODO: few sentences about Docker containiner and what it is used for.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">Running OpenOA Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Integrating New Project Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process and Development Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#entr">ENTR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
 </div>
 </section>
@@ -66,17 +75,18 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">Running OpenOA Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Integrating New Project Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process and Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="install.html" title="next chapter">Installation Process</a></li>
+      <li>Next: <a href="install.html" title="next chapter">Installation Process and Development Guide</a></li>
   </ul></li>
 </ul>
 </div>

@@ -13,4 +13,10 @@
 Running OpenOA Examples
 ***********************
 
-Replace with link to example jupyter notebook(s) in OpenOA (e.g., AEP analysis)
+TODO: Some introduction to how to navigate to and run the OpenOA example notebooks in the Docker container.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   examples_combined

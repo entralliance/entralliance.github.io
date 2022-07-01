@@ -10,12 +10,12 @@
     ^, for subsubsections
     ", for paragraphs
 
-Installation Process
-********************
+Installation Process and Development Guide
+******************************************
 
-Consider linking to ENTR warehouse or ENTR runtime readme file.
-
-Include the following topics as part of installation? 
+Installation and development process, includes running Docker container, building runtime, warehouse, and container. If possible, this can simply copy the entr_runtime raedme file, as shown below (currently pointing to dev branch of entr_runtime). 
 
 * How to build and run the ENTR runtime with the appropriate mounts to local dirs for development 
 * How to run/materialize the ENTR warehouse models on the example data
+
+.. mdinclude:: ./entr_runtime_readme.md

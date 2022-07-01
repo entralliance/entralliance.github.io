@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Integrating New Project Data &#8212; ENTR Data Environment 0 documentation</title>
+    <title>Warehousing Guidelines (Integrating New Project Data) &#8212; ENTR Data Environment 0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -14,10 +14,11 @@
     <script src="_static/underscore.js"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Contribution Guidelines" href="contributing.html" />
-    <link rel="prev" title="Running OpenOA Examples" href="openoa_examples.html" />
+    <link rel="next" title="Production Deployment Guidelines" href="production_deployment.html" />
+    <link rel="prev" title="Installation Process and Development Guide" href="install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -34,11 +35,11 @@
 
           <div class="body" role="main">
             
-  <span class="target" id="dataintegration"></span><section id="integrating-new-project-data">
-<h1>Integrating New Project Data<a class="headerlink" href="#integrating-new-project-data" title="Permalink to this heading">¶</a></h1>
-<p>How to integrate data for new wind plants</p>
+  <span class="target" id="dataintegration"></span><section id="warehousing-guidelines-integrating-new-project-data">
+<h1>Warehousing Guidelines (Integrating New Project Data)<a class="headerlink" href="#warehousing-guidelines-integrating-new-project-data" title="Permalink to this heading">¶</a></h1>
+<p>How to integrate data for new wind plants. For Q3 deliverable, just the csv method. We can add additional methods later. Includes where to save new csv files and how to update models.</p>
 <ul class="simple">
-<li><p>Where to put data files (or how to bring in external db data)</p></li>
+<li><p>Where to put new csv files (eventually how to bring in external db data)</p></li>
 <li><dl class="simple">
 <dt>Steps for mapping new data to appropriate dimensions, building staging models, and integrating in generic ENTR fact tables</dt><dd><ul>
 <li><p>Steps for creating new ENTR tags if none match data brought in by users and contribution guidelines for adding those to the ENTR-maintained tag list (link to <a class="reference internal" href="contributing.html"><span class="doc">Contribution Guidelines</span></a>?)</p></li>
@@ -46,7 +47,7 @@
 </dd>
 </dl>
 </li>
-<li><p>How to run example OpenOA notebook(s) for new project</p></li>
+<li><p>Eventually this can describe the process for adding pre-processing steps.</p></li>
 </ul>
 </section>
 
@@ -69,18 +70,19 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">Running OpenOA Examples</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Integrating New Project Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process and Development Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Warehousing Guidelines (Integrating New Project Data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contribution Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
 
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="openoa_examples.html" title="previous chapter">Running OpenOA Examples</a></li>
-      <li>Next: <a href="contributing.html" title="next chapter">Contribution Guidelines</a></li>
+      <li>Previous: <a href="install.html" title="previous chapter">Installation Process and Development Guide</a></li>
+      <li>Next: <a href="production_deployment.html" title="next chapter">Production Deployment Guidelines</a></li>
   </ul></li>
 </ul>
 </div>
