@@ -60,10 +60,11 @@ html_static_path = ['_static']
 
 # -- Copy external documentation files ---------------------------------------
 
-urlretrieve (
-    "https://raw.githubusercontent.com/entralliance/OpenOA/main/examples/entr/02_plant_aep_analysis_entr.ipynb",
-    "02_plant_aep_analysis.ipynb"
-)
+# TODO: Uncomment once Pandoc issue is fixed in github actions
+# urlretrieve (
+#     "https://raw.githubusercontent.com/entralliance/OpenOA/main/examples/entr/02_plant_aep_analysis_entr.ipynb",
+#     "02_plant_aep_analysis.ipynb"
+# )
 
 urlretrieve (
     "https://raw.githubusercontent.com/entralliance/entr_runtime/dev/README.md",
