@@ -35,6 +35,7 @@ release = '0'
 # ones.
 extensions = [
     "nbsphinx",
+    "m2r2"
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -62,6 +63,11 @@ html_static_path = ['_static']
 urlretrieve (
     "https://raw.githubusercontent.com/entralliance/OpenOA/main/examples/entr/02_plant_aep_analysis_entr.ipynb",
     "02_plant_aep_analysis.ipynb"
+)
+
+urlretrieve (
+    "https://raw.githubusercontent.com/entralliance/entr_runtime/dev/README.md",
+    "entr_runtime_readme.md"
 )
 
 # Merge example Notebooks into one notebook to keep the required structure

@@ -1,5 +1,6 @@
 
 ipython==7.*
+m2r2==0.3.*
 sphinx>=5.0,<6.0
 nbmerge==0.0.4
 nbsphinx==0.8.*
