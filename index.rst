@@ -30,12 +30,13 @@ TODO: few sentences about Docker containiner and what it is used for.
    :caption: Contents:
 
    install.rst
-   examples_combined
    data_integration.rst
    production_deployment.rst
    contributing.rst
    troubleshooting.rst
 
+..
+   Once Pandoc issue is fixed for the github actions, add the following to the toctree above after install.rst: examples_combined
 
 ..
    Indices and tables

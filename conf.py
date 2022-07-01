@@ -70,12 +70,13 @@ urlretrieve (
     "entr_runtime_readme.md"
 )
 
-# Merge example Notebooks into one notebook to keep the required structure
-new_nb = nbmerge.merge_notebooks(
-    "./",
-    (
-        "./examples_intro.ipynb",
-        "./02_plant_aep_analysis.ipynb",
-    ),
-)
-nbmerge.write_notebook(new_nb, "./examples_combined.ipynb")
+# TODO: Uncomment once Pandoc issue is fixed in github actions
+# # Merge example Notebooks into one notebook to keep the required structure
+# new_nb = nbmerge.merge_notebooks(
+#     "./",
+#     (
+#         "./examples_intro.ipynb",
+#         "./02_plant_aep_analysis.ipynb",
+#     ),
+# )
+# nbmerge.write_notebook(new_nb, "./examples_combined.ipynb")
