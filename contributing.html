@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Contribution Guidelines &#8212; ENTR Data Environment 0 documentation</title>
+    <title>Contributing Guidelines &#8212; ENTR Data Environment 0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -35,14 +35,51 @@
 
           <div class="body" role="main">
             
-  <span class="target" id="contributing"></span><section id="contribution-guidelines">
-<h1>Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this heading">¶</a></h1>
-<p>Contribution guidelines. Consider linking to a contributing readme file in ENTR warehouse or ENTR runtime. This should include:</p>
+  <span class="target" id="contributing"></span><section id="contributing-guidelines">
+<h1>Contributing Guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this heading">¶</a></h1>
+<section id="issue-tracking">
+<h2>Issue Tracking<a class="headerlink" href="#issue-tracking" title="Permalink to this heading">¶</a></h2>
+<p>New feature requests, changes, enhancements, non-methodology features, and bug reports can be filed as new issues in the
+<a class="reference external" href="https://github.com/entralliance/entr_runtime/issues">GitHub.com issue tracker</a> at any time. Please be sure to fully describe the
+issue.</p>
+<!---For other issues, please email the ENTR distribution list at `xx`.---></section>
+<section id="repository">
+<h2>Repository<a class="headerlink" href="#repository" title="Permalink to this heading">¶</a></h2>
+<p>The entr_runtime and entr_warehouse repositories are hosted on GitHub, and located here: <a class="reference external" href="https://github.com/entralliance/entr_runtime">https://github.com/entralliance/entr_runtime</a> and <a class="reference external" href="https://github.com/entralliance/entr_warehouse">https://github.com/entralliance/entr_warehouse</a></p>
+<p>These repositories are organized using a modified git-flow system. Branches are organized as follows:</p>
 <ul class="simple">
-<li><p>Basic pull request process. Eventually need to explain steps for contributing to individual components like runtime and warehouse.</p></li>
-<li><p>Suggesting/adding new data tag names</p></li>
-<li><p>Versioning (tags/release guidelines) for both runtime and warehouse</p></li>
+<li><p>master: Stable release version. Must have good test coverage and may not have all the newest features.</p></li>
+<li><p>dev: Development branch which contains the newest features. Tests must pass, but code may be unstable.</p></li>
+<li><p>feature/xxx: Branch from dev, should reference a GitHub issue number.</p></li>
 </ul>
+<p>To work on a feature, please fork entr_runtime or entr_warehouse first. Then clone your fork locally when you are ready to get to work. If your git status is unclean after you clone  (e.g., lots of untracked files and changes), chances are you are dealing with a Unicode normalization issue (specifically, the Unicode decomposition of filenames under macOS). This can be an issue on projects with contributors using a mix of MacOS, Linux, and Windows. To resolve it, delete your clone. Then issue <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.precomposeunicode</span> <span class="pre">true</span></code> and clone your fork again.</p>
+<p>Once you have successfully cloned your fork, create a feature branch from the dev branch. Work out of this feature branch and push changes to your fork before submitting a pull request.
+Be sure to periodically synchronize the upstream dev branch into your feature branch to avoid conflicts in the pull request. GitHub will prompt you to create a pull request back to the original project after the first push from your feature branch to your fork. You can continue to iterate on your feature branch until you are ready to submit your pull request.</p>
+<p>When the feature branch is ready, make a pull request to entralliance/entr_runtime or entralliance/entr_warehouse through the GitHub.com UI.</p>
+<!-- You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](. . . ) --><!---[![CLA assistant](https://cla-assistant.io/readme/badge/IEA-Task-43/digital_wra_data_standard)](https://cla-assistant.io/IEA-Task-43/digital_wra_data_standard) *need to update--></section>
+<section id="pull-request">
+<h2>Pull Request<a class="headerlink" href="#pull-request" title="Permalink to this heading">¶</a></h2>
+<p>Pull requests must be made for any changes to be merged into release branches.
+They must include updated documentation and pass all unit tests and integration tests.
+In addition, code coverage should not be negatively affected by the pull request.</p>
+<p><strong>Scope:</strong> Encapsulate the changes of ideally one, or potentially a couple, issues.
+It is greatly preferable to submit three small pull requests than it is to submit one large pull request.
+Write a complete description of these changes in the pull request body.</p>
+<p><strong>Tests:</strong> Coming soon</p>
+<!--For any changes to the JSON schema, the contributor should
+
+* Make sure that the changes result in a valid JSON schema
+* Adjust the [demo file](https://github.com/IEA-Task-43/digital_wra_data_standard/blob/master/demo_data/iea43_wra_data_model.json) to reflect the changes
+Tools like [jsonschemavalidator](https://www.jsonschemavalidator.net/) can help with these tasks--><p><strong>Documentation:</strong> Include any relevant changes to inline documentation, as well as any changes to the RST files located in the ENTR documentation repository: <a class="reference external" href="https://github.com/entralliance/entralliance.github.io">https://github.com/entralliance/entralliance.github.io</a>.</p>
+<!-- **Changelog:** For pull requests that encapsulate a user-facing feature, or is significant to users of entr_runtime for some other reason, please add a line to CHANGELOG.md in the [Unreleased] section. --><!--- ## Documentation Style
+TBD
+Documentation is written using RST, and is located both inline and within the /sphinx directory.
+Any changes to the analysis methodology should be discussed there or offline. Once a methodology change is decided,
+create new tickets in this repository towards implementing the change.--><!--- ## Testing
+TBD but may define guidelines for validating the schema
+All code should be paired with a corresponding unit or integration test.
+entr_runtime uses pytest and the built in unittest framework.
+For instructions on running tests, please see the [Readme](testing link).--></section>
 </section>
 
 
@@ -65,9 +102,15 @@
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process and Development Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">Running OpenOA Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Contribution Guidelines</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#issue-tracking">Issue Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-request">Pull Request</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
 
