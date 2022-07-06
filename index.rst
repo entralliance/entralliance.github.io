@@ -30,6 +30,7 @@ TODO: few sentences about Docker containiner and what it is used for.
    :caption: Contents:
 
    install.rst
+   openoa_examples.rst
    data_integration.rst
    production_deployment.rst
    contributing.rst
