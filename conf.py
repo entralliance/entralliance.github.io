@@ -66,10 +66,10 @@ html_static_path = ['_static']
 #     "02_plant_aep_analysis.ipynb"
 # )
 
-urlretrieve (
-    "https://raw.githubusercontent.com/entralliance/entr_runtime/dev/README.md",
-    "entr_runtime_readme.md"
-)
+# urlretrieve (
+#     "https://raw.githubusercontent.com/entralliance/entr_runtime/dev/README.md",
+#     "entr_runtime_readme.md"
+# )
 
 urlretrieve (
     "https://raw.githubusercontent.com/entralliance/entr_warehouse/dev/README.md",

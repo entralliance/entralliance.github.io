@@ -10,18 +10,31 @@
     ^, for subsubsections
     ", for paragraphs
 
-Running OpenOA Examples
+OpenOA Examples
 ***********************
 
-Jupyter notebooks demonstrating operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse are located at /examples in the `ENTR OpenOA repository <https://github.com/entralliance/OpenOA>`_. All examples use two years of data for the 4-turbine `"La Haute Borne" <https://opendata-renewables.engie.com>`_ wind plant.
+The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse.
+The example notebooks are located at /examples in the `ENTR OpenOA repository <https://github.com/entralliance/OpenOA>`_.
+All examples use two years of data for the 4-turbine `"La Haute Borne" <https://opendata-renewables.engie.com>`_ wind plant.
 
-TODO: Some introduction to how to navigate to and run the OpenOA example notebooks in the Docker container.
-
-Notebooks
+Running the Examples
 =========
+
+1. Complete the Installation section and open Jupyter Hub in your web browser.
+2. On the left-hand side of Jupter Hub, navigate to: ``src/OpenOA/examples/entr``
+3. Double click on any example notebook to open it.
+
+List of Examples
+=========
+The ENTR runtime contains two example notebooks:
 
 * `Example 1: Basic toolkit functions <https://github.com/entralliance/OpenOA/blob/main/examples/entr/00_toolkit_examples_entr.ipynb>`_
 * `Example 2: Long-term AEP assessment <https://github.com/entralliance/OpenOA/blob/main/examples/entr/02_plant_aep_analysis_entr.ipynb>`_
 
 ..
    TODO: Use nbsphinx to include notebooks directly in documentation once Pandoc issue is fixed for the github action
+
+
+OpenOA documentation
+==========
+OpenOA documentation is hosted on `ReadTheDocs <https://openoa.readthedocs.io/en/latest/>`_

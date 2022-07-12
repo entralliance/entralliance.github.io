@@ -10,12 +10,10 @@
     ^, for subsubsections
     ", for paragraphs
 
-Installation Process and Development Guide
+Installation
 ******************************************
 
-Installation and development process, includes running Docker container, building runtime, warehouse, and container. If possible, this can simply copy the entr_runtime raedme file, as shown below (currently pointing to dev branch of entr_runtime). 
-
-* How to build and run the ENTR runtime with the appropriate mounts to local dirs for development 
-* How to run/materialize the ENTR warehouse models on the example data
+This section contains information on how to install and begin using the ENTR Runtime for analysis.
+For instructions on how to develop the components of the ENTR runtime itself, please see the Contributing Guidelines.
 
 .. mdinclude:: ./entr_runtime_readme.md
