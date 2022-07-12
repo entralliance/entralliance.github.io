@@ -71,6 +71,11 @@ urlretrieve (
     "entr_runtime_readme.md"
 )
 
+urlretrieve (
+    "https://raw.githubusercontent.com/entralliance/entr_warehouse/dev/README.md",
+    "entr_warehouse_readme.md"
+)
+
 # TODO: Uncomment once Pandoc issue is fixed in github actions
 # # Merge example Notebooks into one notebook to keep the required structure
 # new_nb = nbmerge.merge_notebooks(
