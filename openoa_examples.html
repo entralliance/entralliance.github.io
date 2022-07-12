@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Running OpenOA Examples &#8212; ENTR Data Environment 0 documentation</title>
+    <title>OpenOA Examples &#8212; ENTR Data Environment 0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -18,7 +18,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Warehousing Guidelines (Integrating New Project Data)" href="data_integration.html" />
-    <link rel="prev" title="Installation Process and Development Guide" href="install.html" />
+    <link rel="prev" title="Installation" href="install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -35,16 +35,30 @@
 
           <div class="body" role="main">
             
-  <span class="target" id="openoaexamples"></span><section id="running-openoa-examples">
-<h1>Running OpenOA Examples<a class="headerlink" href="#running-openoa-examples" title="Permalink to this heading">¶</a></h1>
-<p>Jupyter notebooks demonstrating operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse are located at /examples in the <a class="reference external" href="https://github.com/entralliance/OpenOA">ENTR OpenOA repository</a>. All examples use two years of data for the 4-turbine <a class="reference external" href="https://opendata-renewables.engie.com">“La Haute Borne”</a> wind plant.</p>
-<p>TODO: Some introduction to how to navigate to and run the OpenOA example notebooks in the Docker container.</p>
-<section id="notebooks">
-<h2>Notebooks<a class="headerlink" href="#notebooks" title="Permalink to this heading">¶</a></h2>
+  <span class="target" id="openoaexamples"></span><section id="openoa-examples">
+<h1>OpenOA Examples<a class="headerlink" href="#openoa-examples" title="Permalink to this heading">¶</a></h1>
+<p>The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse.
+The example notebooks are located at /examples in the <a class="reference external" href="https://github.com/entralliance/OpenOA">ENTR OpenOA repository</a>.
+All examples use two years of data for the 4-turbine <a class="reference external" href="https://opendata-renewables.engie.com">“La Haute Borne”</a> wind plant.</p>
+<section id="running-the-examples">
+<h2>Running the Examples<a class="headerlink" href="#running-the-examples" title="Permalink to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Complete the Installation section and open Jupyter Hub in your web browser.</p></li>
+<li><p>On the left-hand side of Jupter Hub, navigate to: <code class="docutils literal notranslate"><span class="pre">src/OpenOA/examples/entr</span></code></p></li>
+<li><p>Double click on any example notebook to open it.</p></li>
+</ol>
+</section>
+<section id="list-of-examples">
+<h2>List of Examples<a class="headerlink" href="#list-of-examples" title="Permalink to this heading">¶</a></h2>
+<p>The ENTR runtime contains two example notebooks:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/examples/entr/00_toolkit_examples_entr.ipynb">Example 1: Basic toolkit functions</a></p></li>
 <li><p><a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/examples/entr/02_plant_aep_analysis_entr.ipynb">Example 2: Long-term AEP assessment</a></p></li>
 </ul>
+</section>
+<section id="openoa-documentation">
+<h2>OpenOA documentation<a class="headerlink" href="#openoa-documentation" title="Permalink to this heading">¶</a></h2>
+<p>OpenOA documentation is hosted on <a class="reference external" href="https://openoa.readthedocs.io/en/latest/">ReadTheDocs</a></p>
 </section>
 </section>
 
@@ -67,13 +81,16 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Process and Development Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Running OpenOA Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#notebooks">Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenOA Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-examples">Running the Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-examples">List of Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#openoa-documentation">OpenOA documentation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_install.html">Developer Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
@@ -82,7 +99,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="install.html" title="previous chapter">Installation Process and Development Guide</a></li>
+      <li>Previous: <a href="install.html" title="previous chapter">Installation</a></li>
       <li>Next: <a href="data_integration.html" title="next chapter">Warehousing Guidelines (Integrating New Project Data)</a></li>
   </ul></li>
 </ul>
