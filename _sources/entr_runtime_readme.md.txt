@@ -7,7 +7,7 @@
 
 ```docker pull ghcr.io/entralliance/entr_runtime:dev```
 
-*Note: There are numerous security considerations when pulling and running images from the public internet. User should take the necessary steps to ensure operational security in their.*
+*Note: There are numerous security considerations when pulling and running images from the public internet. User should take the necessary steps to ensure operational security.*
 
 3. Run the entr runtime container, forwarding the necessary ports:
 
