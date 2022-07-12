@@ -19,3 +19,5 @@ How to integrate data for new wind plants. For Q3 deliverable, just the csv meth
 * Steps for mapping new data to appropriate dimensions, building staging models, and integrating in generic ENTR fact tables
     * Steps for creating new ENTR tags if none match data brought in by users and contribution guidelines for adding those to the ENTR-maintained tag list (link to :doc:`contributing`?)
 * Eventually this can describe the process for adding pre-processing steps.
+
+.. mdinclude:: ./entr_warehouse_readme.md
