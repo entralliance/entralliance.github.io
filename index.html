@@ -37,29 +37,29 @@
   <section id="entr-alliance-renewable-energy-data-environment">
 <h1>ENTR Alliance Renewable Energy Data Environment<a class="headerlink" href="#entr-alliance-renewable-energy-data-environment" title="Permalink to this heading">¶</a></h1>
 <section id="the-entr-runtime">
-<h2>The <a class="reference external" href="https://github.com/entralliance/entr_runtime">ENTR runtime</a><a class="headerlink" href="#the-entr-runtime" title="Permalink to this heading">¶</a></h2>
+<h2>The <a class="reference external" href="https://github.com/entralliance/entr_runtime">ENTR Runtime</a><a class="headerlink" href="#the-entr-runtime" title="Permalink to this heading">¶</a></h2>
 <p>The ENTR Runtime is a distribution of
-tools, frameworks, and standards relevant to wind energy data analysis,
-packaged together in a Docker container to enable efficient and reproducible analysis workflows.
-The ENTR runtime is based on Jupyter’s Spark Notebook container, adding the ENTR warehouse, the OpenOA operational analysis Python package, and example data.
-The runtime containerizes the required set of software to run ENTR warehouse and OpenOA methods within a single environment,
+tools, frameworks, and standards relevant to renewable energy data analysis,
+packaged together in a Docker container to enable efficient and reproducible analysis workflows. Currently, the ENTR
+runtime is designed for wind energy data, but other technologies are planned for future releases (e.g., solar, battery storage).
+The ENTR runtime is based on Jupyter’s Spark Notebook container, and includes the ENTR warehouse, the OpenOA operational analysis Python package, and example data.
+The runtime containerizes the required set of software to run the ENTR warehouse and OpenOA methods within a single environment,
 and it provides a sandbox environment enabling analysts and developers in the ENTR ecosystem to get started quickly.
 For example, analysts can perform operational assessments with OpenOA using example wind plant data,
-and developers can start customizing the data transformations in the ENTR warehouse.
-The <a class="reference external" href="ghcr.io/entralliance/entr_runtime">ENTR Docker containiner</a> provides a unified analysis environment in
-which the ENTR environment can be deployed in a “write once, run anywhere” and platform-independent way.
-Docker is a cross-platform containerization software that has become the de facto standard for
-deploying self-contained software environments and services for virtually any computer application.</p>
+and developers can start customizing data transformations in the ENTR warehouse.</p>
+<p>The ENTR runtime is implemented as a Docker container (<a class="reference external" href="https://ghcr.io/entralliance/entr_runtime">hosted here</a>), providing a unified analysis environment in which the ENTR environment can be deployed in a “write once, run anywhere” and platform-independent way.
+(<a class="reference external" href="https://www.docker.com">Docker</a> is a cross-platform containerization software that has become the de facto standard for
+deploying self-contained software environments and services for virtually any computer application.)</p>
 <section id="the-entr-warehouse">
-<h3>The <a class="reference external" href="https://github.com/entralliance/entr_warehouse">ENTR warehouse</a><a class="headerlink" href="#the-entr-warehouse" title="Permalink to this heading">¶</a></h3>
-<p>The ENTR Warehouse provides template Data Build Tool (DBT) macros and scripts to assist in building and orchestrating for operational wind plant data.
+<h3>The <a class="reference external" href="https://github.com/entralliance/entr_warehouse">ENTR Warehouse</a><a class="headerlink" href="#the-entr-warehouse" title="Permalink to this heading">¶</a></h3>
+<p>The ENTR Warehouse provides template Data Build Tool (dbt) macros and scripts to assist in building and orchestrating a data warehouse for operational wind plant data. (<a class="reference external" href="https://www.getdbt.com">dbt</a> is an open-source command-line tool designed to build and run data transformations in a data warehouse.)
 The ENTR warehouse provides an open foundation for data analysis, on which methods can be built and standardized.
 The warehouse materializes database objects in the Spark database provided by the ENTR runtime for each type of wind plant data
 (e.g., supervisory control and data acquisition (SCADA), revenue meter), using the standard ENTR data model,
 which includes data transformations and table schema.</p>
 </section>
 <section id="the-openoa-python-package">
-<h3>The <a class="reference external" href="https://github.com/entralliance/OpenOA">OpenOA Python package</a><a class="headerlink" href="#the-openoa-python-package" title="Permalink to this heading">¶</a></h3>
+<h3>The <a class="reference external" href="https://github.com/entralliance/OpenOA">OpenOA Python Package</a><a class="headerlink" href="#the-openoa-python-package" title="Permalink to this heading">¶</a></h3>
 <p>OpenOA (Open Operational Assessment) is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse.
 OpenOA consists of modules for organizing different types of data
 (e.g., revenue meter, SCADA, meteorological tower, and reanalysis),
