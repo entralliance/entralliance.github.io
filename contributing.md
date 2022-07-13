@@ -51,7 +51,7 @@ Tools like [jsonschemavalidator](https://www.jsonschemavalidator.net/) can help 
 
 
 
-**Documentation:** Include any relevant changes to inline documentation, as well as any changes to the RST files located in the ENTR documentation repository: https://github.com/entralliance/entralliance.github.io.
+**Documentation:** Document any relevant changes using inline documentation. If relevant, please also update the RST files located in the ENTR documentation repository to describe code enhancements or new features: https://github.com/entralliance/entralliance.github.io.
 
 <!-- **Changelog:** For pull requests that encapsulate a user-facing feature, or is significant to users of entr_runtime for some other reason, please add a line to CHANGELOG.md in the [Unreleased] section. -->
 

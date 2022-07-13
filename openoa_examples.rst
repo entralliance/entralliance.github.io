@@ -13,7 +13,7 @@
 OpenOA Examples
 ***********************
 
-The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse.
+The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analytics use cases using OpenOA with example data stored in the ENTR warehouse.
 The example notebooks are located at /examples in the `ENTR OpenOA repository <https://github.com/entralliance/OpenOA>`_.
 All examples use two years of data for the 4-turbine `"La Haute Borne" <https://opendata-renewables.engie.com>`_ wind plant.
 
@@ -37,4 +37,6 @@ The ENTR runtime contains two example notebooks:
 
 OpenOA documentation
 ==========
-OpenOA documentation is hosted on `ReadTheDocs <https://openoa.readthedocs.io/en/latest/>`_
+OpenOA documentation is hosted on `ReadTheDocs <https://openoa.readthedocs.io/en/latest/>`_.
+
+Data are stored and organized in OpenOA using a ``PlantData`` object. The ``PlantData`` class in the OpenOA fork included in the ENTR runtime contains a ``from_entr`` method (`link to source code with documentation <https://github.com/entralliance/OpenOA/blob/main/operational_analysis/types/plant.py#L313>`_), which is used to load data into OpenOA from the ENTR warehouse.
