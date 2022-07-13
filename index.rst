@@ -27,6 +27,12 @@ and it provides a sandbox environment enabling analysts and developers in the EN
 For example, analysts can perform operational assessments with OpenOA using example wind plant data,
 and developers can start customizing data transformations in the ENTR warehouse.
 
+.. figure:: ./images/entr_runtime_diagram.png
+   :width: 300
+   :alt: Block diagram of the ENTR Runtime container. The image is based on Jupyter all spark notebook, which in turn is based on Ubuntu. The runtime adds the OpenOA and Entr Warehouse packages to this stack.
+
+   Block diagram of the ENTR Runtime container. The image is based on Jupyter all spark notebook, which in turn is based on Ubuntu. The runtime adds the OpenOA and Entr Warehouse packages to this stack.
+
 The ENTR runtime is implemented as a Docker container (`hosted here <https://ghcr.io/entralliance/entr_runtime>`_), providing a unified analysis environment in which the ENTR environment can be deployed in a “write once, run anywhere” and platform-independent way.
 (`Docker <https://www.docker.com>`_ is a cross-platform containerization software that has become the de facto standard for
 deploying self-contained software environments and services for virtually any computer application.)
