@@ -17,9 +17,9 @@ ENTR Alliance Renewable Energy Data Environment
 
 The `ENTR Runtime <https://github.com/entralliance/entr_runtime>`_
 ----
-The ENTR Runtime is a distribution of 
+The ENTR runtime is a distribution of 
 tools, frameworks, and standards relevant to renewable energy data analysis,
-packaged together in a Docker container to enable efficient and reproducible analysis workflows. Currently, the ENTR
+packaged together in a Docker container to enable efficient and reproducible analysis workflows. The ENTR runtime is managed by the `ENTR Alliance <https://www.entralliance.com>`_ initiative. Currently, the ENTR
 runtime is designed for wind energy data, but other technologies are planned for future releases (e.g., solar, battery storage).
 The ENTR runtime is based on Jupyter's Spark Notebook container, and includes the ENTR warehouse, the OpenOA operational analysis Python package, and example data.
 The runtime containerizes the required set of software to run the ENTR warehouse and OpenOA methods within a single environment,

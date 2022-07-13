@@ -36,14 +36,18 @@
   <p>Welcome to the ENTR Data Warehouse</p>
 <section id="background">
 <h1>Background<a class="headerlink" href="#background" title="Permalink to this heading">¶</a></h1>
-<p>The ENTR Warehouse is a <a class="reference external" href="https://www.getdbt.com/">dbt</a> project with the goal of providing a common ground of data (formats and transformation methods) upon which renewable energy industry users can build and share analytical applications. Once an industry user integrates his or her data into the generic fact and dimension tables in the ENTR model, he or she will then be able to utilize any associated applications that were built on top of the standard ENTR table schema. This decoupling of data preparation………..</p>
+<p>The ENTR Warehouse is a <a class="reference external" href="https://www.getdbt.com/">dbt</a> project with the goal of providing a common ground of data (formats and transformation methods) upon which renewable energy industry users can build and share analytical applications. Once an industry user integrates his or her data into the generic fact and dimension tables in the ENTR model, he or she will then be able to utilize any associated applications that were built on top of the standard ENTR table schema.</p>
 </section>
 <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference external" href="https://github.com/entralliance/entr_runtime">ENTR Runtime</a> Docker image contains all of the dependencies needed for this tutorial including a standalone Apache Spark warehouse that can be used for running everything contained within the ENTR Warehouse dbt project. See the installation guide <a class="reference external" href="https://entralliance.github.io/install.html">here</a> for how to build and set up the ENTR Runtime.</p>
-<p><a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation#overview">dbt docs</a> for the entr_warehouse dbt project can be found at <a class="reference external" href="https://entralliance.github.io/entr_warehouse">https://entralliance.github.io/entr_warehouse</a>. This interface is particularly useful for exploring and understanding the ENTR data model.</p>
+</section>
+<section id="entr-data-model">
+<h1>ENTR Data Model<a class="headerlink" href="#entr-data-model" title="Permalink to this heading">¶</a></h1>
+<p><a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation#overview">dbt docs</a> for the entr_warehouse dbt project can be found at <a class="reference external" href="https://entralliance.github.io/entr_warehouse">https://entralliance.github.io/entr_warehouse</a>. This interface is useful for exploring and understanding the ENTR data model.</p>
+</section>
 <section id="how-to-bring-your-own-data">
-<h2>How to Bring Your Own Data<a class="headerlink" href="#how-to-bring-your-own-data" title="Permalink to this heading">¶</a></h2>
+<h1>How to Bring Your Own Data<a class="headerlink" href="#how-to-bring-your-own-data" title="Permalink to this heading">¶</a></h1>
 <p><em>Note:</em> the following steps require at least basic experience with building models in dbt.</p>
 <p>The ENTR Runtime image contains pre-built models defined by the ENTR Warehouse based on open-source example data; however, for users wishing to bring their own data, the ENTR Warehouse supports setup of new sources from CSV and other Spark-readable file types by leveraging the <a class="reference external" href="https://github.com/dbt-labs/dbt-external-tables/tree/main">dbt-external-tables</a> package from dbt-labs.</p>
 <ul class="simple">
@@ -74,9 +78,8 @@
 <li><p>After unioning on the new source into the generic fact table, your data will be ready for consumption by ENTR-based applications.</p></li>
 </ul>
 </section>
-</section>
 <section id="resources">
-<h1>Resources:<a class="headerlink" href="#resources" title="Permalink to this heading">¶</a></h1>
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Learn more about dbt from the <a class="reference external" href="https://docs.getdbt.com/docs/introduction">dbt docs</a></p></li>
 <li><p>Check out the <a class="reference external" href="https://discourse.getdbt.com/">dbt Discourse</a> for commonly asked questions and answers</p></li>
@@ -107,7 +110,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">OpenOA Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_integration.html">ENTR Warehousing Guidelines and ENTR Data Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev_install.html">Developer Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing Guidelines</a></li>

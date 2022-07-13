@@ -17,7 +17,7 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Warehousing Guidelines (Integrating New Project Data)" href="data_integration.html" />
+    <link rel="next" title="ENTR Warehousing Guidelines and ENTR Data Model" href="data_integration.html" />
     <link rel="prev" title="Installation" href="install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -37,7 +37,7 @@
             
   <span class="target" id="openoaexamples"></span><section id="openoa-examples">
 <h1>OpenOA Examples<a class="headerlink" href="#openoa-examples" title="Permalink to this heading">¶</a></h1>
-<p>The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analyses using OpenOA with example data stored in the ENTR warehouse.
+<p>The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analytics use cases using OpenOA with example data stored in the ENTR warehouse.
 The example notebooks are located at /examples in the <a class="reference external" href="https://github.com/entralliance/OpenOA">ENTR OpenOA repository</a>.
 All examples use two years of data for the 4-turbine <a class="reference external" href="https://opendata-renewables.engie.com">“La Haute Borne”</a> wind plant.</p>
 <section id="running-the-examples">
@@ -58,7 +58,8 @@ All examples use two years of data for the 4-turbine <a class="reference externa
 </section>
 <section id="openoa-documentation">
 <h2>OpenOA documentation<a class="headerlink" href="#openoa-documentation" title="Permalink to this heading">¶</a></h2>
-<p>OpenOA documentation is hosted on <a class="reference external" href="https://openoa.readthedocs.io/en/latest/">ReadTheDocs</a></p>
+<p>OpenOA documentation is hosted on <a class="reference external" href="https://openoa.readthedocs.io/en/latest/">ReadTheDocs</a>.</p>
+<p>Data are stored and organized in OpenOA using a <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> object. The <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> class in the OpenOA fork included in the ENTR runtime contains a <code class="docutils literal notranslate"><span class="pre">from_entr</span></code> method (<a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/operational_analysis/types/plant.py#L313">link to source code with documentation</a>), which is used to load data into OpenOA from the ENTR warehouse.</p>
 </section>
 </section>
 
@@ -88,7 +89,7 @@ All examples use two years of data for the 4-turbine <a class="reference externa
 <li class="toctree-l2"><a class="reference internal" href="#openoa-documentation">OpenOA documentation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="data_integration.html">Warehousing Guidelines (Integrating New Project Data)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_integration.html">ENTR Warehousing Guidelines and ENTR Data Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev_install.html">Developer Setup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing Guidelines</a></li>
@@ -100,7 +101,7 @@ All examples use two years of data for the 4-turbine <a class="reference externa
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="install.html" title="previous chapter">Installation</a></li>
-      <li>Next: <a href="data_integration.html" title="next chapter">Warehousing Guidelines (Integrating New Project Data)</a></li>
+      <li>Next: <a href="data_integration.html" title="next chapter">ENTR Warehousing Guidelines and ENTR Data Model</a></li>
   </ul></li>
 </ul>
 </div>
