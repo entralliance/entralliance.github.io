@@ -49,12 +49,12 @@ For instructions on how to develop the components of the ENTR runtime itself, pl
 </li>
 <li><p>Pull and run our image from github container registry:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ghcr.io/entralliance/entr_runtime:dev</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ghcr.io/entralliance/entr_runtime:latest</span></code></p>
 <p><em>Note: There are numerous security considerations when pulling and running images from the public internet. User should take the necessary steps to ensure operational security.</em></p>
 <ol class="arabic simple">
 <li><p>Run the entr runtime container, forwarding the necessary ports:</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">ghcr.io/entralliance/entr_runtime:dev</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">ghcr.io/entralliance/entr_runtime:latest</span></code></p>
 <ol class="arabic simple">
 <li><p>Open the Jupyter link printed to the terminal in your web browser.</p></li>
 </ol>
@@ -151,7 +151,7 @@ For instructions on how to develop the components of the ENTR runtime itself, pl
       &copy;2022, ENTR Alliance.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
