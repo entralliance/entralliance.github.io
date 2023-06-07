@@ -65,14 +65,17 @@ The warehouse materializes database objects in the Spark database provided by th
 (e.g., supervisory control and data acquisition (SCADA), revenue meter), using the standard ENTR data model,
 which includes data transformations and table schema.</p>
 </section>
-<section id="the-openoa-python-package">
-<h3>The <a class="reference external" href="https://github.com/entralliance/OpenOA">OpenOA Python Package</a><a class="headerlink" href="#the-openoa-python-package" title="Permalink to this heading">¶</a></h3>
+<section id="python-packages-openoa-and-py-entr">
+<h3>Python Packages <a class="reference external" href="https://github.com/entralliance/OpenOA">OpenOA</a> and <a class="reference external" href="https://github.com/entralliance/py-entr">py-entr</a><a class="headerlink" href="#python-packages-openoa-and-py-entr" title="Permalink to this heading">¶</a></h3>
 <p>OpenOA (Open Operational Assessment) is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse.
 OpenOA consists of modules for organizing different types of data
 (e.g., revenue meter, SCADA, meteorological tower, and reanalysis),
 low-level data analysis toolkits (e.g., filtering, power curve fitting),
 and high-level operational assessment methods (such as long-term energy production estimation).
 OpenOA is maintained and primarily developed by the National Renewable Energy laboratory (<a class="reference external" href="https://www.nrel.gov/wind/openoa.html">more information</a>).</p>
+<p>In addition to OpenOA, the entr_runtime distributes a python package called <cite>entr</cite>,
+which provides connection classes to interface with and query from the built-in Spark ENTR warehouse,
+as well as a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects using ENTR data.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -97,7 +100,7 @@ OpenOA is maintained and primarily developed by the National Renewable Energy la
 </li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev_install.html">Developer Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dev_install.html#running-entr-in-dev-mode">Running ENTR in Dev Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev_install.html#manually-running-entr-in-dev-mode">Manually Running ENTR in Dev Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev_install.html#to-update-the-warehouse">To Update the Warehouse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev_install.html#advanced-topics">Advanced Topics</a></li>
 </ul>

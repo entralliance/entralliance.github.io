@@ -45,7 +45,7 @@ The warehouse materializes database objects in the Spark database provided by th
 (e.g., supervisory control and data acquisition (SCADA), revenue meter), using the standard ENTR data model,
 which includes data transformations and table schema.
 
-The `OpenOA Python Package <https://github.com/entralliance/OpenOA>`_
+Python Packages `OpenOA <https://github.com/entralliance/OpenOA>`_ and `py-entr <https://github.com/entralliance/py-entr>`_
 ^^^^^
 OpenOA (Open Operational Assessment) is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse.
 OpenOA consists of modules for organizing different types of data
@@ -53,6 +53,11 @@ OpenOA consists of modules for organizing different types of data
 low-level data analysis toolkits (e.g., filtering, power curve fitting),
 and high-level operational assessment methods (such as long-term energy production estimation).
 OpenOA is maintained and primarily developed by the National Renewable Energy laboratory (`more information <https://www.nrel.gov/wind/openoa.html>`_).
+
+In addition to OpenOA, the entr_runtime distributes a python package called `entr`,
+which provides connection classes to interface with and query from the built-in Spark ENTR warehouse,
+as well as a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects using ENTR data.
+
 
 .. toctree::
    :maxdepth: 2

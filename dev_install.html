@@ -39,17 +39,18 @@
   <span class="target" id="dev-install"></span><section id="developer-setup">
 <h1>Developer Setup<a class="headerlink" href="#developer-setup" title="Permalink to this heading">¶</a></h1>
 <p>This section contains information on how to begin developing the components of the ENTR Runtime environment.</p>
-<section id="running-entr-in-dev-mode">
-<h2>Running ENTR in Dev Mode<a class="headerlink" href="#running-entr-in-dev-mode" title="Permalink to this heading">¶</a></h2>
-<p>The ENTR runtime contains the following preinstalled components: OpenOA, entr_warehouse. To develop these components, you check out development versions of these packages to your local filesystem, and then start the entr image with these paths mounted as volumes. This allows you to edit the code in these components on your local machine, and see the changes immediately reflected in the runtime. If <code class="docutils literal notranslate"><span class="pre">$ENTR_HOME</span></code> is the directory you’d like to work from:</p>
+<section id="manually-running-entr-in-dev-mode">
+<h2>Manually Running ENTR in Dev Mode<a class="headerlink" href="#manually-running-entr-in-dev-mode" title="Permalink to this heading">¶</a></h2>
+<p>The ENTR runtime contains the following preinstalled components: OpenOA, entr_warehouse, and py-entr. To develop these components, you check out development versions of these packages to your local filesystem, and then start the entr image with these paths mounted as volumes. You then install the packages from these volumes in editable mode. This allows you to edit the code in these components on your local machine, and see the changes immediately reflected in the runtime. If <code class="docutils literal notranslate"><span class="pre">$ENTR_HOME</span></code> is the directory you’d like to work from:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$ENTR_HOME</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">https://github.com/entralliance/entr_warehouse.git</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">https://github.com/entralliance/OpenOA.git</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">https://github.com/entralliance/entr_runtime.git</span></code></p></li>
-<li><p>Optionally, build the entr image. You can also use the dev image from the container registry as discussed in Quickstart.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/entr_warehouse.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/OpenOA.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/py_entr.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/entr_runtime.git</span></code></p></li>
+<li><p>Optionally, build the entr image. You can also use the dev image from the container registry as discussed in the quickstart guide.</p></li>
 <li><p>Now, start the entr container in dev mode, mapping the directories you checked out to paths within the container:
-<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/OpenOA:/home/jovyan/src/OpenOA</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/entr_warehouse:/home/jovyan/src/entr_warehouse</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/OpenOA:/home/jovyan/src/OpenOA</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/entr_warehouse:/home/jovyan/src/entr_warehouse</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/py-entr:/home/jovyan/src/py-entr</span></code>.</p></li>
 <li><p>Once inside the container, you will then need to re-install OpenOA in editable mode, or run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run</span></code> as needed to materialize any changes to the dbt model code in the warehouse.</p>
 <ul class="simple">
 <li><p>To install OpenOA in editable mode:</p>
@@ -95,6 +96,14 @@
 !connect jdbc:hive2://localhost:10000
 </pre></div>
 </div>
+<section id="using-vscode-dev-container">
+<h3>Using VSCode Dev Container<a class="headerlink" href="#using-vscode-dev-container" title="Permalink to this heading">¶</a></h3>
+<p>We provide an <a class="reference external" href="https://github.com/jordanperr/entr_dev_environment.git">example VSCode Dev Container</a> config which can be used to get up and running quickly developing the ENTR platform. This is the recommended method if you use VSCode and are familliar with VSCode Dev Containers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/jordanperr/entr_dev_environment.git</span></code>
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">entr_dev_environment</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span> <span class="pre">--remote</span></code></p>
+<p>Then, open the project with VSCode and follow the prompts to initialize the dev container.</p>
+</section>
 </section>
 </section>
 
@@ -122,7 +131,7 @@
 <li class="toctree-l1"><a class="reference internal" href="data_integration.html">ENTR Warehousing Guidelines and ENTR Data Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Setup</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#running-entr-in-dev-mode">Running ENTR in Dev Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#manually-running-entr-in-dev-mode">Manually Running ENTR in Dev Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#to-update-the-warehouse">To Update the Warehouse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced-topics">Advanced Topics</a></li>
 </ul>
