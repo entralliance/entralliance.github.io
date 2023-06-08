@@ -16,7 +16,7 @@ ENTR Alliance Renewable Energy Data Environment
     ", for paragraphs
 
 The `ENTR Runtime <https://github.com/entralliance/entr_runtime>`_
-----
+------------------------------------------------------------------------
 The ENTR runtime is a distribution of 
 tools, frameworks, and standards relevant to renewable energy data analysis,
 packaged together in a Docker container to enable efficient and reproducible analysis workflows. The ENTR runtime is managed by the `ENTR Alliance <https://www.entralliance.com>`_ initiative. Currently, the ENTR
@@ -38,7 +38,7 @@ The ENTR runtime is implemented as a Docker container (`hosted here <https://ghc
 deploying self-contained software environments and services for virtually any computer application.)
 
 The `ENTR Warehouse <https://github.com/entralliance/entr_warehouse>`_
-^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The ENTR Warehouse provides template Data Build Tool (dbt) macros and scripts to assist in building and orchestrating a data warehouse for operational wind plant data. (`dbt <https://www.getdbt.com>`_ is an open-source command-line tool designed to build and run data transformations in a data warehouse.)
 The ENTR warehouse provides an open foundation for data analysis, on which methods can be built and standardized.
 The warehouse materializes database objects in the Spark database provided by the ENTR runtime for each type of wind plant data
@@ -46,7 +46,7 @@ The warehouse materializes database objects in the Spark database provided by th
 which includes data transformations and table schema.
 
 Python Packages `OpenOA <https://github.com/entralliance/OpenOA>`_ and `py-entr <https://github.com/entralliance/py-entr>`_
-^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 OpenOA (Open Operational Assessment) is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse.
 OpenOA consists of modules for organizing different types of data
 (e.g., revenue meter, SCADA, meteorological tower, and reanalysis),

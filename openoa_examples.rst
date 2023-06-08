@@ -18,14 +18,14 @@ The example notebooks are located at /examples in the `ENTR OpenOA repository <h
 All examples use two years of data for the 4-turbine `"La Haute Borne" <https://opendata-renewables.engie.com>`_ wind plant.
 
 Running the Examples
-=========
+========================
 
 1. Complete the Installation section and open Jupyter Hub in your web browser.
 2. On the left-hand side of Jupter Hub, navigate to: ``src/OpenOA/examples/entr``
 3. Double click on any example notebook to open it.
 
 List of Examples
-=========
+===================
 The ENTR runtime contains two example notebooks:
 
 * `Example 1: Basic toolkit functions <https://github.com/entralliance/OpenOA/blob/main/examples/entr/00_toolkit_examples_entr.ipynb>`_
@@ -36,7 +36,7 @@ The ENTR runtime contains two example notebooks:
 
 
 OpenOA documentation
-==========
+======================
 OpenOA documentation is hosted on `ReadTheDocs <https://openoa.readthedocs.io/en/latest/>`_.
 
 Data are stored and organized in OpenOA using a ``PlantData`` object. The ``PlantData`` class in the OpenOA fork included in the ENTR runtime contains a ``from_entr`` method (`link to source code with documentation <https://github.com/entralliance/OpenOA/blob/main/operational_analysis/types/plant.py#L313>`_), which is used to load data into OpenOA from the ENTR warehouse.
