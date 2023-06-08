@@ -47,6 +47,17 @@ View the documentation at <a class="reference external" href="https://entrallian
 </pre></div>
 </div>
 <p>Finally, open the HTML that is built in <code class="docutils literal notranslate"><span class="pre">./_build/html/index.html</span></code> with your web browser.</p>
+<section id="overriding-external-repo-branches">
+<h2>Overriding External Repo Branches<a class="headerlink" href="#overriding-external-repo-branches" title="Permalink to this heading">¶</a></h2>
+<p>If you want to change the branches from which external files are retrieved, you can specify environment variables in your <code class="docutils literal notranslate"><span class="pre">make</span></code> command to override defaults. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">ENTR_WAREHOUSE_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span>
+</pre></div>
+</div>
+<p>You can also optionally change all of the default branches used to their development branches by specifying the <code class="docutils literal notranslate"><span class="pre">DEFAULT_GITBRANCH</span></code> environment variable when building the docs. For example, the following would use the “dev” branches for all external repos except for <code class="docutils literal notranslate"><span class="pre">dbt-entr</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">DEFAULT_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span> <span class="n">DBT_ENTR_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.2&quot;</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="github-actions-publishing">
 <h1>Github Actions Publishing<a class="headerlink" href="#github-actions-publishing" title="Permalink to this heading">¶</a></h1>
@@ -112,7 +123,7 @@ View the documentation at <a class="reference external" href="https://entrallian
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2022, ENTR Alliance.
+      &copy;2023, ENTR Foundation.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
