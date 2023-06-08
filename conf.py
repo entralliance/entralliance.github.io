@@ -13,16 +13,25 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import nbmerge
-
+# import nbmerge
+import os
+from datetime import datetime
 from urllib.request import urlretrieve
 
+# default "dev" external repos/branches
+default_branch = os.getenv("DEFAULT_GITBRANCH") or 'main'
+OPENOA_GITREPO = os.getenv("OPENOA_GITREPO") or 'entralliance/OpenOA'
+OPENOA_GITBRANCH = os.getenv("OPENOA_GITBRANCH") or default_branch
+ENTR_RUNTIME_GITBRANCH = os.getenv("ENTR_RUNTIME_GITBRANCH") or default_branch
+ENTR_WAREHOUSE_GITBRANCH = os.getenv("ENTR_WAREHOUSE_GITBRANCH") or default_branch
+DBT_ENTR_GITBRANCH = os.getenv("DBT_ENTR_GITBRANCH") or default_branch
+DBT_OPENOA_GITBRANCH = os.getenv("DBT_OPENOA_GITBRANCH") or default_branch
 
 # -- Project information -----------------------------------------------------
 
 project = 'ENTR Data Environment'
-copyright = '2022, ENTR Alliance'
-author = 'ENTR Alliance'
+copyright = f'{datetime.today().strftime("%Y")}, ENTR Foundation'
+author = 'ENTR Foundation'
 
 # The full version, including alpha/beta/rc tags
 release = '0'
@@ -50,7 +59,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_external']
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
 html_theme = 'alabaster'
 
 # Add any paths that contain custom static files (such as style sheets) here,
