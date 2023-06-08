@@ -3,23 +3,38 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ENTR Alliance Renewable Energy Data Environment
+.. _index:
+
+ENTR Foundation
 ===============================================
 
-.. ::
+Welcome to the ENTR Foundation docs site!
 
-    # with overline, for parts
-    * with overline, for chapters
-    =, for sections
-    -, for subsections
-    ^, for subsubsections
-    ", for paragraphs
+.. TODO: add how to reach out?
+This documentation can be used to learn more about the technology built by the ENTR Foundation to support our mission of establishing open data standards for the clean energy industry.
+
+- Find out more about ENTR: `<https://www.entrfoundation.org>`_
+- `Sign up for the ENTR Newsletter <https://share.hsforms.com/1KkvJPJorSK2P2-3yY4m7Hw8mogq>`_
+- `Follow us on LinkedIn <https://www.linkedin.com/company/90693649>`_
+- `Join us on Slack <https://join.slack.com/t/entralliance/shared_invite/zt-1x6945h00-iDxalk2w9cHO~n2Dw4btyg>`_
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   install.rst
+   openoa_examples.rst
+   data_integration.rst
+   production_deployment.rst
+   dev_install.rst
+   contributing.rst
+   troubleshooting.rst
 
 The `ENTR Runtime <https://github.com/entralliance/entr_runtime>`_
 ------------------------------------------------------------------------
 The ENTR runtime is a distribution of 
 tools, frameworks, and standards relevant to renewable energy data analysis,
-packaged together in a Docker container to enable efficient and reproducible analysis workflows. The ENTR runtime is managed by the `ENTR Alliance <https://www.entralliance.com>`_ initiative. Currently, the ENTR
+packaged together in a Docker container to enable efficient and reproducible analysis workflows. The ENTR runtime is managed by the `ENTR Foundation <https://www.entrfoundation.org>`_ initiative. Currently, the ENTR
 runtime is designed for wind energy data, but other technologies are planned for future releases (e.g., solar, battery storage).
 The ENTR runtime is based on Jupyter's Spark Notebook container, and includes the ENTR warehouse, the OpenOA operational analysis Python package, and example data.
 The runtime containerizes the required set of software to run the ENTR warehouse and OpenOA methods within a single environment,
@@ -27,8 +42,8 @@ and it provides a sandbox environment enabling analysts and developers in the EN
 For example, analysts can perform operational assessments with OpenOA using example wind plant data,
 and developers can start customizing data transformations in the ENTR warehouse.
 
-.. figure:: ./images/entr_runtime_diagram.png
-   :width: 300
+.. figure:: ./images/entr_runtime_diagram.svg
+   :width: 700
    :alt: Block diagram of the ENTR Runtime container. The image is based on Jupyter all spark notebook, which in turn is based on Ubuntu. The runtime adds the OpenOA, Entr Warehouse, and example data to this stack.
 
    Block diagram of the ENTR Runtime container. The image is based on Jupyter all spark notebook, which in turn is based on Ubuntu. The runtime adds the OpenOA, Entr Warehouse, and example data to this stack.
@@ -59,17 +74,6 @@ which provides connection classes to interface with and query from the built-in 
 as well as a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects using ENTR data.
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   install.rst
-   openoa_examples.rst
-   data_integration.rst
-   production_deployment.rst
-   dev_install.rst
-   contributing.rst
-   troubleshooting.rst
 
 ..
    Once Pandoc issue is fixed for the github actions, add the following to the toctree above after install.rst: examples_combined
