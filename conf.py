@@ -44,7 +44,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_external']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -62,18 +62,18 @@ html_static_path = ['_static']
 
 # TODO: Uncomment once Pandoc issue is fixed in github actions
 # urlretrieve (
-#     "https://raw.githubusercontent.com/entralliance/OpenOA/main/examples/entr/02_plant_aep_analysis_entr.ipynb",
-#     "02_plant_aep_analysis.ipynb"
+#     f"https://raw.githubusercontent.com/{OPENOA_GITREPO}/{OPENOA_GITBRANCH}/examples/entr/02_plant_aep_analysis_entr.ipynb",
+#     "_external/02_plant_aep_analysis.ipynb"
 # )
 
 # urlretrieve (
-#     "https://raw.githubusercontent.com/entralliance/entr_runtime/dev/README.md",
-#     "entr_runtime_readme.md"
+#     f"https://raw.githubusercontent.com/entralliance/entr_runtime/{ENTR_RUNTIME_GITBRANCH}/README.md",
+#     "_external/entr_runtime_readme.md"
 # )
 
 urlretrieve (
-    "https://raw.githubusercontent.com/entralliance/entr_warehouse/dev/README.md",
-    "entr_warehouse_readme.md"
+    f"https://raw.githubusercontent.com/entralliance/entr_warehouse/{ENTR_WAREHOUSE_GITBRANCH}/README.md",
+    "_external/entr_warehouse_readme.md"
 )
 
 # TODO: Uncomment once Pandoc issue is fixed in github actions

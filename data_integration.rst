@@ -13,4 +13,4 @@
 ENTR Warehousing Guidelines and ENTR Data Model
 ***********************************************
 
-.. mdinclude:: ./entr_warehouse_readme.md
+.. mdinclude:: ./_external/entr_warehouse_readme.md
