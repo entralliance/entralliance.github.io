@@ -1,4 +1,4 @@
-### Manually Running ENTR in Dev Mode
+## Manually Running ENTR in Dev Mode
 
 The ENTR runtime contains the following preinstalled components: OpenOA, entr_warehouse, and py-entr. To develop these components, you check out development versions of these packages to your local filesystem, and then start the entr image with these paths mounted as volumes. You then install the packages from these volumes in editable mode. This allows you to edit the code in these components on your local machine, and see the changes immediately reflected in the runtime. If `$ENTR_HOME` is the directory you'd like to work from:
 
@@ -18,7 +18,7 @@ The ENTR runtime contains the following preinstalled components: OpenOA, entr_wa
         - `cd /home/jovyan/src/entr_warehouse`
         - `dbt run`
 
-### To Update the Warehouse
+## Updating the Warehouse
 
 Changes to the warehouse may require re-running dbt. To do this:
 
@@ -28,7 +28,7 @@ Changes to the warehouse may require re-running dbt. To do this:
 4. (Re-)register example or newly added source data files with `dbt run-operation stage_external_sources`
 5. Run `dbt run` to build all models in the Spark warehouse, which can now be consumed by any application connected to the Spark warehouse such as OpenOA
 
-### Advanced Topics
+## Advanced Topics
 
 Extra ports:
 
@@ -50,7 +50,7 @@ beeline
 !connect jdbc:hive2://localhost:10000
 ```
 
-#### Using VSCode Dev Container
+## Using VSCode Dev Container
 
 We provide an [example VSCode Dev Container](https://github.com/jordanperr/entr_dev_environment.git) config which can be used to get up and running quickly developing the ENTR platform. This is the recommended method if you use VSCode and are familliar with VSCode Dev Containers.
 
