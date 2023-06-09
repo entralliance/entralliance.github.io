@@ -10,7 +10,6 @@ ENTR Foundation
 
 Welcome to the ENTR Foundation docs site!
 
-.. TODO: add how to reach out?
 This documentation can be used to learn more about the technology built by the ENTR Foundation to support our mission of establishing open data standards for the clean energy industry.
 
 - Find out more about ENTR: `<https://www.entrfoundation.org>`_
@@ -27,8 +26,9 @@ This documentation can be used to learn more about the technology built by the E
    data_integration.rst
    production_deployment.rst
    dev_install.rst
-   contributing.rst
+   contributing.md
    troubleshooting.rst
+   Readme.md
 
 The `ENTR Runtime <https://github.com/entralliance/entr_runtime>`_
 ------------------------------------------------------------------------

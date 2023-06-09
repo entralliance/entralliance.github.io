@@ -15,4 +15,4 @@ Developer Setup
 
 This section contains information on how to begin developing the components of the ENTR Runtime environment.
 
-.. mdinclude:: ./entr_runtime_dev_readme.md
+.. mdinclude:: ./content/entr_runtime_dev_readme.md
