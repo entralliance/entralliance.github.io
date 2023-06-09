@@ -17,6 +17,9 @@
 import os
 from datetime import datetime
 from urllib.request import urlretrieve
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # default "dev" external repos/branches
 default_branch = os.getenv("DEFAULT_GITBRANCH") or 'main'
