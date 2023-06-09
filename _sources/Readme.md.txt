@@ -37,7 +37,7 @@ make html ENTR_WAREHOUSE_GITBRANCH="0.0.1"
 
 #### Option 2: Specify during build
 
-One more option is to copy the .env_example into a .env file (`cp .env_sample .env`) and populate it with variables you'd like to override.
+One more option is to copy the .env_example into a .env file (`cp .env_example .env`) and populate it with variables you'd like to override.
 
 #### Option 3: Set default branch for all external
 
