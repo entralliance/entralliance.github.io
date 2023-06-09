@@ -24,12 +24,25 @@ Finally, open the HTML that is built in `./_build/html/index.html` with your web
 
 ### Overriding External Repo Branches
 
-If you want to change the branches from which external files are retrieved, you can specify environment variables in your `make` command to override defaults. For example:
+If you want to change the branches from which external files are retrieved, you can use any combination of the following options.
+
+Note that these options are listed in order of precedence
+
+#### Option 1: Specify during build
+
+ specify environment variables in your `make` command to override defaults. For example:
 ```
 make html ENTR_WAREHOUSE_GITBRANCH="0.0.1"
 ```
 
+#### Option 2: Specify during build
+
+One more option is to copy the .env_example into a .env file (`cp .env_sample .env`) and populate it with variables you'd like to override.
+
+#### Option 3: Set default branch for all external
+
 You can also optionally change all of the default branches used to their development branches by specifying the `DEFAULT_GITBRANCH` environment variable when building the docs. For example, the following would use the "dev" branches for all external repos except for `dbt-entr`:
+
 ```
 make html DEFAULT_GITBRANCH="dev" DBT_ENTR_GITBRANCH="0.0.2"
 ```
