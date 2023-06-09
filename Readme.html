@@ -53,14 +53,28 @@
 <p>Finally, open the HTML that is built in <code class="docutils literal notranslate"><span class="pre">./_build/html/index.html</span></code> with your web browser.</p>
 <section id="overriding-external-repo-branches">
 <h3>Overriding External Repo Branches<a class="headerlink" href="#overriding-external-repo-branches" title="Permalink to this heading">¶</a></h3>
-<p>If you want to change the branches from which external files are retrieved, you can specify environment variables in your <code class="docutils literal notranslate"><span class="pre">make</span></code> command to override defaults. For example:</p>
+<p>If you want to change the branches from which external files are retrieved, you can use any combination of the following options.</p>
+<p>Note that these options are listed in order of precedence</p>
+<section id="option-1-specify-during-build">
+<h4>Option 1: Specify during build<a class="headerlink" href="#option-1-specify-during-build" title="Permalink to this heading">¶</a></h4>
+<blockquote>
+<div><p>specify environment variables in your <code class="docutils literal notranslate"><span class="pre">make</span></code> command to override defaults. For example:</p>
+</div></blockquote>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">ENTR_WAREHOUSE_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span>
 </pre></div>
 </div>
+</section>
+<section id="option-2-specify-during-build">
+<h4>Option 2: Specify during build<a class="headerlink" href="#option-2-specify-during-build" title="Permalink to this heading">¶</a></h4>
+<p>One more option is to copy the .env_example into a .env file (<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">.env_sample</span> <span class="pre">.env</span></code>) and populate it with variables you’d like to override.</p>
+</section>
+<section id="option-3-set-default-branch-for-all-external">
+<h4>Option 3: Set default branch for all external<a class="headerlink" href="#option-3-set-default-branch-for-all-external" title="Permalink to this heading">¶</a></h4>
 <p>You can also optionally change all of the default branches used to their development branches by specifying the <code class="docutils literal notranslate"><span class="pre">DEFAULT_GITBRANCH</span></code> environment variable when building the docs. For example, the following would use the “dev” branches for all external repos except for <code class="docutils literal notranslate"><span class="pre">dbt-entr</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">DEFAULT_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span> <span class="n">DBT_ENTR_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.2&quot;</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="github-actions-publishing">
