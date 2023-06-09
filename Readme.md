@@ -1,7 +1,12 @@
-This repository contains the documentation for ENTR.
-View the documentation at [entralliance.github.io](https://entralliance.github.io)
+This repository contains the content for the ENTR docs site, which can be viewed at [entralliance.github.io](https://entralliance.github.io)
 
-## Quickstart
+# Docs Maintenance and Contributions
+
+If you have any questions or find items within these docs that would benefit from further clarification, please open an issue here or start a conversation with us on our [Slack documentation channel](https://app.slack.com/client/TQYRQ0YR4/C05BHMZ3CLW). If you haven't already joined the ENTR Slack workspace, you can sign up [here](https://join.slack.com/t/entralliance/shared_invite/zt-1x6945h00-iDxalk2w9cHO~n2Dw4btyg).
+
+To contribute to the ENTR docs, clone this repository, develop and build your changes locally (see below), and open a pull request targeting the main branch - these changes will be reviewed by the ENTR maintainers before being published.
+
+## Local Development Quickstart
 
 To develop and build docs locally, first install dependencies:
 
