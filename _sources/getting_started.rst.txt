@@ -47,10 +47,6 @@ Run ENTR on Your Data
 If you're already using dbt, you should install dbt-openoa in your dbt project and follow the guidelines below for how to build models to
 feed the ENTR transformation pipeline to leverage OpenOA.
 
-
-Using the ENTR Warehouse Example Project
-----------------------------------------
-
 The ENTR Warehouse is an example dbt project available on the ENTR runtime - the easiest way to test out the functionality of the ENTR data stack
 on your own data if you aren't already using dbt is to load data as a CSV 
 
