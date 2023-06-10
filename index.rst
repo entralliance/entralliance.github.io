@@ -33,7 +33,7 @@ The ENTR Foundation maintains several open-source code repositories that were bu
 Table of Contents
 -----------------
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    overview.rst
    getting_started.rst

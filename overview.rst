@@ -5,14 +5,10 @@
 
     # with overline, for parts
     * with overline, for chapters
-    ^, for sections
+    =, for sections
     -, for subsections
     ^, for subsubsections
     ", for paragraphs
-
-
-.. toctree::
-   :maxdepth: 2
 
 #############
 ENTR Overview
@@ -36,7 +32,7 @@ i.e. structuring, naming, and validating data to feed analytical products. Orche
 value of these analytical tools even more difficult.
 
 While standards like IEC 61400-5 provide a theoretical framework for standardizing data, more specific, methodological frameworks for implementing data standards at scale have been missing from the
-open source community - the ENTR Foundation is leading the charge to remediate that critical point of failure.
+renewables community - the ENTR Foundation is leading the charge to remediate that critical point of failure.
 Our stance is that we can provide the most effective implementation of data standardization by creating software that makes it easy to structure and name data within relational data stores.
 Having well-defined tabular data then makes it easy to build, validate, and distribute analytical tools collaboratively because the structure of input data can be aligned.
 
@@ -57,22 +53,22 @@ Data Warehousing Packages
 We are leveraging data build tool (dbt) to ship data standards in relational data stores.
 
 dbt-entr
-^^^^^^^^
+--------
 dbt-entr is an dbt package containing table schema (structural conventions) and tag names (naming conventions) to reduce the burden of data preparation for analysis.
 These conventions enable a methodological implementation of data standards compatible with any relational data warehouse (visit our `CircleCI website <https://app.circleci.com/pipelines/github/entralliance/dbt-entr?branch^main>`_ to view the ones we've verified so far).
 This package provides a stable foundation upon which the rest of the ENTR stack is built.
 
 dbt-openoa
-^^^^^^^^^^
+----------
 dbt-openoa...
 
 Analytical Packages
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 The ENTR Foundation has developed the following packages in Python for analysis.
 
 `OpenOA <https://github.com/entralliance/OpenOA>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------
 
 OpenOA (Open Operational Assessment) is used within the ENTR environment to perform operational assessments of wind plants using data stored in the ENTR warehouse.
 OpenOA consists of modules for organizing different types of data
@@ -82,17 +78,18 @@ and high-level operational assessment methods (such as long-term energy producti
 OpenOA is maintained and primarily developed by the National Renewable Energy laboratory (`more information <https://www.nrel.gov/wind/openoa.html>`_).
 
 `py-entr <https://github.com/entralliance/py-entr>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------
 
 In addition to OpenOA, the entr_runtime distributes a python package called `entr`,
 which provides connection classes to interface with and query from the built-in Spark ENTR warehouse,
 as well as a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects using ENTR data.
 
 Example Implementation Environments
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The `ENTR Warehouse <https://github.com/entralliance/entr_warehouse>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------------------------------------
+
 The ENTR Warehouse provides template Data Build Tool (dbt) macros and scripts to assist in building and orchestrating a data warehouse for operational wind plant data. (`dbt <https://www.getdbt.com>`_ is an open-source command-line tool designed to build and run data transformations in a data warehouse.)
 The ENTR warehouse provides an open foundation for data analysis, on which methods can be built and standardized.
 The warehouse materializes database objects in the Spark database provided by the ENTR runtime for each type of wind plant data
@@ -101,7 +98,8 @@ which includes data transformations and table schema.
 
 
 The `ENTR Runtime <https://github.com/entralliance/entr_runtime>`_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------------------------------------------
+
 The ENTR runtime is a distribution of 
 tools, frameworks, and standards relevant to renewable energy data analysis,
 packaged together in a Docker container to enable efficient and reproducible analysis workflows. The ENTR runtime is managed by the `ENTR Foundation <https://www.entrfoundation.org>`_ initiative. Currently, the ENTR
