@@ -16,11 +16,6 @@ Getting Started
 
 How to get started using the ENTR data stack.
 
-Table of Contents
------------------
-.. toctree::
-   :maxdepth: 2
-
 *****************************
 Installating the ENTR Runtime
 *****************************
