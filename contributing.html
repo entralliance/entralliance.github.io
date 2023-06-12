@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Getting Involved &#8212; ENTR 0 documentation</title>
+    <title>Contributing Guidelines &#8212; ENTR Data Environment 0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -18,8 +18,8 @@
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Docs Site" href="docs_site.html" />
-    <link rel="prev" title="Getting Started" href="getting_started.html" />
+    <link rel="next" title="Troubleshooting Guidelines" href="troubleshooting.html" />
+    <link rel="prev" title="Developer Setup" href="dev_install.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -36,31 +36,16 @@
 
           <div class="body" role="main">
             
-  <span class="target" id="getting-involved"></span><div class="toctree-wrapper compound">
-</div>
-<section id="id1">
-<h1>Getting Involved<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
-<section id="join-the-entr-community">
-<h2>Join the ENTR Community<a class="headerlink" href="#join-the-entr-community" title="Permalink to this heading">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://share.hsforms.com/1KkvJPJorSK2P2-3yY4m7Hw8mogq">Sign up for the ENTR Newsletter</a></p></li>
-<li><p><a class="reference external" href="https://www.linkedin.com/company/90693649">Follow us on LinkedIn</a></p></li>
-<li><p><a class="reference external" href="https://join.slack.com/t/entralliance/shared_invite/zt-1x6945h00-iDxalk2w9cHO~n2Dw4btyg">Join us on Slack</a></p></li>
-</ul>
-</section>
-<section id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h2>
-</section>
-<section id="contributing-guidelines">
-<h2>Contributing Guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this heading">¶</a></h2>
+  <span class="target" id="contributing"></span><section id="contributing-guidelines">
+<h1>Contributing Guidelines<a class="headerlink" href="#contributing-guidelines" title="Permalink to this heading">¶</a></h1>
 <section id="issue-tracking">
-<h3>Issue Tracking<a class="headerlink" href="#issue-tracking" title="Permalink to this heading">¶</a></h3>
+<h2>Issue Tracking<a class="headerlink" href="#issue-tracking" title="Permalink to this heading">¶</a></h2>
 <p>New feature requests, changes, enhancements, non-methodology features, and bug reports can be filed as new issues in the
 <a class="reference external" href="https://github.com/entralliance/entr_runtime/issues">GitHub.com issue tracker</a> at any time. Please be sure to fully describe the
 issue.</p>
 <!---For other issues, please email the ENTR distribution list at `xx`.---></section>
 <section id="repository">
-<h3>Repository<a class="headerlink" href="#repository" title="Permalink to this heading">¶</a></h3>
+<h2>Repository<a class="headerlink" href="#repository" title="Permalink to this heading">¶</a></h2>
 <p>The entr_runtime and entr_warehouse repositories are hosted on GitHub, and located here: <a class="reference external" href="https://github.com/entralliance/entr_runtime">https://github.com/entralliance/entr_runtime</a> and <a class="reference external" href="https://github.com/entralliance/entr_warehouse">https://github.com/entralliance/entr_warehouse</a></p>
 <p>These repositories are organized using a modified git-flow system. Branches are organized as follows:</p>
 <ul class="simple">
@@ -74,7 +59,7 @@ Be sure to periodically synchronize the upstream dev branch into your feature br
 <p>When the feature branch is ready, make a pull request to entralliance/entr_runtime or entralliance/entr_warehouse through the GitHub.com UI.</p>
 <!-- You will need to accept the Contributor License Agreement(CLA) for pull requests greater than 20 lines in length. [CLA Language](. . . ) --><!---[![CLA assistant](https://cla-assistant.io/readme/badge/IEA-Task-43/digital_wra_data_standard)](https://cla-assistant.io/IEA-Task-43/digital_wra_data_standard) *need to update--></section>
 <section id="pull-request">
-<h3>Pull Request<a class="headerlink" href="#pull-request" title="Permalink to this heading">¶</a></h3>
+<h2>Pull Request<a class="headerlink" href="#pull-request" title="Permalink to this heading">¶</a></h2>
 <p>Pull requests must be made for any changes to be merged into release branches.
 They must include updated documentation and pass all unit tests and integration tests.
 In addition, code coverage should not be negatively affected by the pull request.</p>
@@ -96,13 +81,6 @@ TBD but may define guidelines for validating the schema
 All code should be paired with a corresponding unit or integration test.
 entr_runtime uses pytest and the built in unittest framework.
 For instructions on running tests, please see the [Readme](testing link).--></section>
-<section id="new-tag-names">
-<h3>New Tag Names<a class="headerlink" href="#new-tag-names" title="Permalink to this heading">¶</a></h3>
-<p>The dbt-entr package contains a list of approximately 2500 data tag names (<a class="reference external" href="https://github.com/entralliance/dbt-entr/blob/main/seeds/seed_entr_tag_list.csv">available here</a>). Most of these tag names describe wind turbine SCADA data channels based on the IEC 61400-25 standard obtained from <a class="reference external" href="https://scada-international.com">SCADA International</a>. However, there may be data channels that are missing from this list. If you would like to include new data channels in the ENTR data stack, please submit a pull request to the <a class="reference external" href="https://github.com/entralliance/dbt-entr/">dbt-entr repository</a> with the proposed new tag names added to the end of the <a class="reference external" href="https://github.com/entralliance/dbt-entr/blob/main/seeds/seed_entr_tag_list.csv">current list of tage names</a>.</p>
-<p>ENTR tage names should be of the form {Logical Node}.{Sensor Name}, where the logical node indicates the category to which the data belong (e.g., WMET for meteorological information and WROT for rotor information) and the sensor name describes the specific channel (e.g., HorWdSpd for horizontal wind speed and RotSpd for rotor speed). When possible, for wind energy data, logical nodes and sensor names defined in the IEC 61400-25-2 standard should be used. However, logical nodes and sensor names from other IEC standards (e.g., IEC 61850 - Communication Networks and Systems for Power Utility Automation) can be used as well. For example, the ENTR tag list uses the logical node MMTR from the IEC 61850 standard to represent the revenue meter. If you cannot find an existing logical node or sensor name for a new tag name, you may create a new name, which should be based on existing names as much as possible. For example, to represent reanalysis weather data, the ENTR tag list uses the WMETR logical node, which is based on the existing WMET logical node; to indicate the U and V components of horizontal wind speed, the sensor names HorWdSpdU and HorWdSpdV, which are based on the existing HorWdSpd sensor name, are used.</p>
-<p>When contributing a new tag name to the ENTR tag list, the following fields should be specified: the ENTR tag ID, the tag subtype ID (if a tag name can correspond to multiple data channels), the ENTR tag name, the tag subtype description (if applicable), the logical node, the sensor name, the full tag name description, and the units.</p>
-</section>
-</section>
 </section>
 
 
@@ -112,44 +90,41 @@ For instructions on running tests, please see the [Readme](testing link).--></se
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">ENTR</a></h1>
+<h1 class="logo"><a href="index.html">ENTR Data Environment</a></h1>
 
 
 
-<p class="blurb">Open data standards for clean energy</p>
-
-
-
-
-<p>
-<iframe src="https://ghbtns.com/github-btn.html?user=entralliance&repo=entralliance.github.io&type=follow&count=true&size=large&v=2"
-  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
-</p>
 
 
 
 
 
 <h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">ENTR Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Involved</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#join-the-entr-community">Join the ENTR Community</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#contributing-guidelines">Contributing Guidelines</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#issue-tracking">Issue Tracking</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#repository">Repository</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pull-request">Pull Request</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#new-tag-names">New Tag Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openoa_examples.html">OpenOA Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data_integration.html">ENTR Warehousing Guidelines and ENTR Data Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="production_deployment.html">Production Deployment Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dev_install.html">Developer Setup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#issue-tracking">Issue Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repository">Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-request">Pull Request</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="docs_site.html">Docs Site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting Guidelines</a></li>
 </ul>
 
-
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="dev_install.html" title="previous chapter">Developer Setup</a></li>
+      <li>Next: <a href="troubleshooting.html" title="next chapter">Troubleshooting Guidelines</a></li>
+  </ul></li>
+</ul>
+</div>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -160,19 +135,27 @@ For instructions on running tests, please see the [Readme](testing link).--></se
     </div>
 </div>
 <script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2023, ENTR Foundation.
+      &copy;2022, ENTR Alliance.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
-      <a href="_sources/getting_involved.rst.txt"
+      <a href="_sources/contributing.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
