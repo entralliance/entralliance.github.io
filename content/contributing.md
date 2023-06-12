@@ -66,3 +66,8 @@ TBD but may define guidelines for validating the schema
 All code should be paired with a corresponding unit or integration test.
 entr_runtime uses pytest and the built in unittest framework.
 For instructions on running tests, please see the [Readme](testing link).-->
+
+
+## New Tag Names
+
+Coming soon...
