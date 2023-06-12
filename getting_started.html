@@ -290,14 +290,14 @@ options:</p>
 <section id="running-openoa-on-entr">
 <h3>Running OpenOA on ENTR<a class="headerlink" href="#running-openoa-on-entr" title="Permalink to this heading">¶</a></h3>
 <p>The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analytics use cases using OpenOA with example data stored in the ENTR warehouse.
-The example notebooks are located at /examples in the <a class="reference external" href="https://github.com/entralliance/OpenOA">ENTR OpenOA repository</a>.
+The example notebooks are located at /examples in the <a class="reference external" href="https://github.com/entralliance/entr_runtime/tree/dev/docker/workspace/examples">ENTR Runtime Docker workspace</a>.
 All examples use two years of data for the 4-turbine <a class="reference external" href="https://opendata-renewables.engie.com">“La Haute Borne”</a> wind plant.</p>
 </section>
 <section id="running-the-examples">
 <h3>Running the Examples<a class="headerlink" href="#running-the-examples" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Complete the Installation section and open Jupyter Hub in your web browser.</p></li>
-<li><p>On the left-hand side of Jupter Hub, navigate to: <code class="docutils literal notranslate"><span class="pre">src/OpenOA/examples/entr</span></code></p></li>
+<li><p>On the left-hand side of Jupter Hub, navigate to: <code class="docutils literal notranslate"><span class="pre">examples</span></code></p></li>
 <li><p>Double click on any example notebook to open it.</p></li>
 </ol>
 </section>
@@ -305,14 +305,14 @@ All examples use two years of data for the 4-turbine <a class="reference externa
 <h3>List of Examples<a class="headerlink" href="#list-of-examples" title="Permalink to this heading">¶</a></h3>
 <p>The ENTR runtime contains two example notebooks:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/examples/entr/00_toolkit_examples_entr.ipynb">Example 1: Basic toolkit functions</a></p></li>
-<li><p><a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/examples/entr/02_plant_aep_analysis_entr.ipynb">Example 2: Long-term AEP assessment</a></p></li>
+<li><p><cite>Example 1: Introduction to PyENTR and the OpenOA ``from_entr()`</cite> constructor &lt;<a class="reference external" href="https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb">https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb</a>&gt;`_</p></li>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_01_aep_analysis_demo.ipynb">Example 2: Long-term AEP assessment</a></p></li>
 </ul>
 </section>
 <section id="openoa-documentation">
 <h3>OpenOA documentation<a class="headerlink" href="#openoa-documentation" title="Permalink to this heading">¶</a></h3>
 <p>OpenOA documentation is hosted on <a class="reference external" href="https://openoa.readthedocs.io/en/latest/">ReadTheDocs</a>.</p>
-<p>Data are stored and organized in OpenOA using a <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> object. The <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> class in the OpenOA fork included in the ENTR runtime contains a <code class="docutils literal notranslate"><span class="pre">from_entr</span></code> method (<a class="reference external" href="https://github.com/entralliance/OpenOA/blob/main/operational_analysis/types/plant.py#L313">link to source code with documentation</a>), which is used to load data into OpenOA from the ENTR warehouse.</p>
+<p>Data are stored and organized in OpenOA using a <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> object. The <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> class uses the <code class="docutils literal notranslate"><span class="pre">plantdata.from_entr</span></code> method from the py-entr package (<a class="reference external" href="https://github.com/entralliance/py-entr/blob/d544a5873f3709c2f5b45f77c1f72d0596be9e34/entr/plantdata.py#LL167C15-L167C15">https://github.com/entralliance/py-entr/blob/d544a5873f3709c2f5b45f77c1f72d0596be9e34/entr/plantdata.py#LL167C15-L167C15</a>) to load data into OpenOA from the ENTR Warehouse.</p>
 </section>
 </section>
 </section>
