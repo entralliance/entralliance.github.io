@@ -67,7 +67,7 @@ List of Examples
 
 The ENTR runtime contains two example notebooks:
 
-* `Example 1: Introduction to PyENTR and the OpenOA ``from_entr()`` constructor <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb>`_
+* `Example 1: Introduction to PyENTR and the OpenOA from_entr() constructor <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb>`_
 * `Example 2: Long-term AEP assessment <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_01_aep_analysis_demo.ipynb>`_
 
 ..
@@ -78,4 +78,4 @@ OpenOA documentation
 
 OpenOA documentation is hosted on `ReadTheDocs <https://openoa.readthedocs.io/en/latest/>`_.
 
-Data are stored and organized in OpenOA using a ``PlantData`` object. The ``PlantData`` class uses the ``plantdata.from_entr`` method from the py-entr package (`<https://github.com/entralliance/py-entr/blob/d544a5873f3709c2f5b45f77c1f72d0596be9e34/entr/plantdata.py#LL167C15-L167C15>`_) to load data into OpenOA from the ENTR Warehouse.
+Data are stored and organized in OpenOA using a ``PlantData`` object. The ``PlantData`` class uses the ``plantdata.from_entr`` method from the py-entr package (`link to code <https://github.com/entralliance/py-entr/blob/d544a5873f3709c2f5b45f77c1f72d0596be9e34/entr/plantdata.py#LL167C15-L167C15>`_) to load data into OpenOA from the ENTR Warehouse.
