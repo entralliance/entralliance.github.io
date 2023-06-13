@@ -47,6 +47,10 @@ Architecture
 
    The ENTR Runtime Docker image contains a reference implementation of the ENTR data stack showcasing how ENTR has made it feasible to distribute NREL's OpenOA (Open Operational Assessment) analytical methods
 
+The ENTR data stack is comprised of data warehousing packages, which are built to facilitate buildout and maintenance of relational data stores (i.e. databases and/or data warehouses),
+analytical packages, which contain user-facing code intended for use by analysts/data scientists, and example implementation environments, which provide examples of how to implement
+multiple packages within the ENTR data stack to illustrate patterns of use and to facilitate getting started.
+
 Data Warehousing Packages
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -54,13 +58,13 @@ We are leveraging data build tool (dbt) to ship data standards in relational dat
 
 dbt-entr
 --------
-dbt-entr is an dbt package containing table schema (structural conventions) and tag names (naming conventions) to reduce the burden of data preparation for analysis.
+dbt-entr is a dbt package containing table schema (structural conventions) and tag names (naming conventions) to reduce the burden of data preparation for analysis.
 These conventions enable a methodological implementation of data standards compatible with any relational data warehouse (visit our `CircleCI website <https://app.circleci.com/pipelines/github/entralliance/dbt-entr?branch^main>`_ to view the ones we've verified so far).
 This package provides a stable foundation upon which the rest of the ENTR stack is built.
 
 dbt-openoa
 ----------
-dbt-openoa...
+dbt-openoa is a dbt package containing projections of the standard ENTR warehouse structures (contained within dbt-entr) into analytics-ready models intended for use in OpenOA.
 
 Analytical Packages
 ^^^^^^^^^^^^^^^^^^^
@@ -81,8 +85,8 @@ OpenOA is maintained and primarily developed by the National Renewable Energy la
 ----------------------------------------------------
 
 In addition to OpenOA, the entr_runtime distributes a python package called `entr`,
-which provides connection classes to interface with and query from the built-in Spark ENTR warehouse,
-as well as a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects using ENTR data.
+which provides connection classes to interface with and query from the Spark ENTR warehouse contained within the dbt_runtime image.
+This package includes a constructor for OpenOA which facilitates the creation of OpenOA PlantData objects from ENTR data (built by dbt-openoa).
 
 Example Implementation Environments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
