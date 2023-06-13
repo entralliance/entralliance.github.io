@@ -11,10 +11,16 @@
     ", for paragraphs
 
 
-#############
-ENTR Packages
-#############
+#################
+ENTR Repositories
+#################
+
+The following repositories are maintained by ENTR as part of the ENTR data stack.
+
+----
 
 .. mdinclude:: ./_external/dbt-entr-readme.md
+
+----
 
 .. mdinclude:: ./_external/dbt-openoa-readme.md
