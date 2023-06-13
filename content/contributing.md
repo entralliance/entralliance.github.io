@@ -10,6 +10,8 @@ If you're unsure about which repository to use, you can [create a new issue in t
 
 *Please be sure to fully describe any new issues.*
 
+**Note:** it may be helpful to engage in a discussion before submitting a new issue on GitHub. We encourage opening conversations on Slack (see above) if you'd like to involve the community in the brainstorming effort before opening an issue!
+
 ## Code Contributions
 
 The ENTR Foundation's free, open-source code repositories are hosted on GitHub in the [entralliance GitHub organization](https://github.com/entralliance).
