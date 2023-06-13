@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Docs Site &#8212; ENTR 0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting Involved" href="getting_involved.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <span class="target" id="docssite"></span><div class="toctree-wrapper compound">
+</div>
+<section id="docs-site">
+<h1>Docs Site<a class="headerlink" href="#docs-site" title="Permalink to this heading">¶</a></h1>
+<p>This repository contains the content for the ENTR docs site, which can be viewed at <a class="reference external" href="https://entralliance.github.io">entralliance.github.io</a></p>
+<p>If you have any questions or find items within these docs that would benefit from further clarification, please open an issue here or start a conversation with us on our <a class="reference external" href="https://app.slack.com/client/TQYRQ0YR4/C05BHMZ3CLW">Slack documentation channel</a>. If you haven’t already joined the ENTR Slack workspace, you can sign up <a class="reference external" href="https://join.slack.com/t/entralliance/shared_invite/zt-1x6945h00-iDxalk2w9cHO~n2Dw4btyg">here</a>.</p>
+<section id="maintenance">
+<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this heading">¶</a></h2>
+<p>To contribute to the ENTR docs, clone this repository, develop and build your changes locally (see below), and open a pull request targeting the main branch - these changes will be reviewed by the ENTR maintainers before being published.</p>
+<section id="local-development-quickstart">
+<h3>Local Development Quickstart<a class="headerlink" href="#local-development-quickstart" title="Permalink to this heading">¶</a></h3>
+<p>To develop and build docs locally, first install dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Then, (re)build the documentation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>Finally, open the HTML that is built in <code class="docutils literal notranslate"><span class="pre">./_build/html/index.html</span></code> with your web browser.</p>
+</section>
+<section id="overriding-external-repo-branches">
+<h3>Overriding External Repo Branches<a class="headerlink" href="#overriding-external-repo-branches" title="Permalink to this heading">¶</a></h3>
+<p>If you want to change the branches from which external files are retrieved, you can use any combination of the following options.</p>
+<p>Note that these options are listed in order of precedence</p>
+<section id="option-1-specify-during-build">
+<h4>Option 1: Specify during build<a class="headerlink" href="#option-1-specify-during-build" title="Permalink to this heading">¶</a></h4>
+<p>Specify environment variables in your <code class="docutils literal notranslate"><span class="pre">make</span></code> command to override defaults. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">ENTR_WAREHOUSE_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.1&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="option-2-specify-during-build">
+<h4>Option 2: Specify during build<a class="headerlink" href="#option-2-specify-during-build" title="Permalink to this heading">¶</a></h4>
+<p>One more option is to copy the .env_example into a .env file (<code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">.env_example</span> <span class="pre">.env</span></code>) and populate it with variables you’d like to override.</p>
+</section>
+<section id="option-3-set-default-branch-for-all-external">
+<h4>Option 3: Set default branch for all external<a class="headerlink" href="#option-3-set-default-branch-for-all-external" title="Permalink to this heading">¶</a></h4>
+<p>You can also optionally change all of the default branches used to their development branches by specifying the <code class="docutils literal notranslate"><span class="pre">DEFAULT_GITBRANCH</span></code> environment variable when building the docs. For example, the following would use the “dev” branches for all external repos except for <code class="docutils literal notranslate"><span class="pre">dbt-entr</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span> <span class="n">DEFAULT_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span> <span class="n">DBT_ENTR_GITBRANCH</span><span class="o">=</span><span class="s2">&quot;0.0.2&quot;</span>
+</pre></div>
+</div>
+<section id="github-actions-publishing">
+<h5>Github Actions Publishing<a class="headerlink" href="#github-actions-publishing" title="Permalink to this heading">¶</a></h5>
+<p>This documentation is automatically built and served through Github Pages using the <code class="docutils literal notranslate"><span class="pre">gh_pages</span></code> branch. This is configured in <code class="docutils literal notranslate"><span class="pre">.github/workflows/gh-pages-deploy.yml</span></code></p>
+<p>View the documentation live at <a class="reference external" href="https://entralliance.github.io">entralliance.github.io</a></p>
+</section>
+</section>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ENTR</a></h1>
+
+
+
+<p class="blurb">Open data standards for clean energy</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=entralliance&repo=entralliance.github.io&type=follow&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">ENTR Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_involved.html">Getting Involved</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Docs Site</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#maintenance">Maintenance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#local-development-quickstart">Local Development Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overriding-external-repo-branches">Overriding External Repo Branches</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ENTR Foundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/docs_site.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

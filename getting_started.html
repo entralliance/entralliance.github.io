@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started &#8212; ENTR 0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Involved" href="getting_involved.html" />
+    <link rel="prev" title="ENTR Overview" href="overview.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <span class="target" id="getting-started"></span><section id="id1">
+<h1>Getting Started<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h1>
+<p>How to get started using the ENTR data stack.</p>
+<section id="installating-the-entr-runtime">
+<h2>Installating the ENTR Runtime<a class="headerlink" href="#installating-the-entr-runtime" title="Permalink to this heading">¶</a></h2>
+<p>This section contains information on how to install and begin using the ENTR Runtime for analysis.
+For instructions on how to develop the components of the ENTR runtime itself, please see the Developer Setup section.</p>
+<section id="pull-and-run-the-image">
+<h3>Pull and Run the Image<a class="headerlink" href="#pull-and-run-the-image" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Install Docker Desktop on your workstation (see <a class="reference external" href="https://www.docker.com/products/docker-desktop">instructions</a>).</p>
+<ul class="simple">
+<li><p>We recommend following <a class="reference external" href="https://docs.docker.com/docker-for-windows/install/">this guide</a> to install Docker on Windows. After installing the WSL 2 backend and Docker you should be able to run containers using Windows PowerShell.</p></li>
+</ul>
+</li>
+<li><p>Pull and run our image from github container registry:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ghcr.io/entralliance/entr_runtime:latest</span></code></p>
+<p><em>Note: There are numerous security considerations when pulling and running images from the public internet. User should take the necessary steps to ensure operational security.</em></p>
+<ol class="arabic simple">
+<li><p>Run the entr runtime container, forwarding the necessary ports:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">ghcr.io/entralliance/entr_runtime:latest</span></code></p>
+<ol class="arabic simple">
+<li><p>Open the Jupyter link printed to the terminal in your web browser.</p></li>
+</ol>
+</section>
+<section id="building-your-own-image">
+<h3>Building your own Image<a class="headerlink" href="#building-your-own-image" title="Permalink to this heading">¶</a></h3>
+<p>In most cases, we reccomend using the pre-built entr_runtime image avaialble from the github container registry. If you need to rebuild the image yourself, follow the instructions below:</p>
+<ol class="arabic simple">
+<li><p>Install Git and Docker Desktop on your workstation.</p></li>
+<li><p>Clone the ENTR Runtime repository:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="n">entralliance</span><span class="o">/</span><span class="n">entr_runtime</span><span class="o">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">dev</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">entr_runtime</span></code> directory and run the following, replacing <code class="docutils literal notranslate"><span class="pre">yourname</span></code> with your username:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">yourname</span><span class="o">/</span><span class="n">entr</span><span class="o">-</span><span class="n">runtime</span> <span class="n">docker</span>
+</pre></div>
+</div>
+<p><em>Note: Use the option ``–no-cache`` to force rebuilding of each layer</em></p>
+<ol class="arabic simple">
+<li><p>Run the image you just built:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">yourname/entr_runtime</span></code></p>
+</section>
+</section>
+<section id="developing-with-the-entr-runtime">
+<h2>Developing with the ENTR Runtime<a class="headerlink" href="#developing-with-the-entr-runtime" title="Permalink to this heading">¶</a></h2>
+<p>This section contains information on how to begin developing the components of the ENTR Runtime environment.</p>
+<section id="manually-running-entr-in-dev-mode">
+<h3>Manually Running ENTR in Dev Mode<a class="headerlink" href="#manually-running-entr-in-dev-mode" title="Permalink to this heading">¶</a></h3>
+<p>The ENTR runtime contains the following preinstalled components: OpenOA, entr_warehouse, and py-entr. To develop these components, you check out development versions of these packages to your local filesystem, and then start the entr image with these paths mounted as volumes. You then install the packages from these volumes in editable mode. This allows you to edit the code in these components on your local machine, and see the changes immediately reflected in the runtime. If <code class="docutils literal notranslate"><span class="pre">$ENTR_HOME</span></code> is the directory you’d like to work from:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$ENTR_HOME</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/entr_warehouse.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/OpenOA.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/py_entr.git</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/entralliance/entr_runtime.git</span></code></p></li>
+<li><p>Optionally, build the entr image. You can also use the dev image from the container registry as discussed in the quickstart guide.</p></li>
+<li><p>Now, start the entr container in dev mode, mapping the directories you checked out to paths within the container:
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8888:8888</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/OpenOA:/home/jovyan/src/OpenOA</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/entr_warehouse:/home/jovyan/src/entr_warehouse</span> <span class="pre">-v</span> <span class="pre">$ENTR_HOME/py-entr:/home/jovyan/src/py-entr</span></code>.</p></li>
+<li><p>Once inside the container, you will then need to re-install OpenOA in editable mode, or run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run</span></code> as needed to materialize any changes to the dbt model code in the warehouse.</p>
+<ul class="simple">
+<li><p>To install OpenOA in editable mode:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/home/jovyan/src/OpenOA</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code></p></li>
+</ul>
+</li>
+<li><p>To re-run DBT:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/home/jovyan/src/entr_warehouse</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="updating-the-warehouse">
+<h3>Updating the Warehouse<a class="headerlink" href="#updating-the-warehouse" title="Permalink to this heading">¶</a></h3>
+<p>Changes to the warehouse may require re-running dbt. To do this:</p>
+<ol class="arabic simple">
+<li><p>Open a terminal from Jupyter (File &gt; New &gt; Terminal) and navigate to the location where your dbt project is installed (see section “Assumed Repository Structure” section below) using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/src/entr_warehouse</span></code> and run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">debug</span></code> to test your connection to the Spark warehouse.</p></li>
+<li><p>Once the connection to the warehouse is confirmed, install the dbt packages for your project using <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">deps</span></code></p></li>
+<li><p>Seed the metadata tables contained in the entr_warehouse repo using <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">seed</span></code> to instantiate them in the Spark warehouse</p></li>
+<li><p>(Re-)register example or newly added source data files with <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run-operation</span> <span class="pre">stage_external_sources</span></code></p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run</span></code> to build all models in the Spark warehouse, which can now be consumed by any application connected to the Spark warehouse such as OpenOA</p></li>
+</ol>
+</section>
+<section id="advanced-topics">
+<h3>Advanced Topics<a class="headerlink" href="#advanced-topics" title="Permalink to this heading">¶</a></h3>
+<p>Extra ports:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8888</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">8080</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4040</span><span class="p">:</span><span class="mi">4040</span> <span class="n">entr</span><span class="o">/</span><span class="n">entr</span><span class="o">-</span><span class="n">runtime</span>
+</pre></div>
+</div>
+<p>Override OpenOA and entr_warehouse with local versions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8888</span><span class="p">:</span><span class="mi">8888</span> <span class="o">-</span><span class="n">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">8080</span> <span class="o">-</span><span class="n">p</span> <span class="mi">4040</span><span class="p">:</span><span class="mi">4040</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">clone</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">OpenOA</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jovyan</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">OpenOA</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">local</span><span class="o">-</span><span class="n">clone</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">entr_warehouse</span><span class="o">&gt;</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jovyan</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">entr_warehouse</span> <span class="n">entr</span><span class="o">/</span><span class="n">entr</span><span class="o">-</span><span class="n">runtime</span><span class="o">-</span><span class="n">dev</span>
+</pre></div>
+</div>
+<p>Note, you will then need to re-install OpenOA in editable mode, or run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run</span></code> as needed to update the container with the new code.</p>
+<p>Beeline connect string for ENTR warehouse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>beeline
+!connect jdbc:hive2://localhost:10000
+</pre></div>
+</div>
+</section>
+<section id="using-vscode-dev-container">
+<h3>Using VSCode Dev Container<a class="headerlink" href="#using-vscode-dev-container" title="Permalink to this heading">¶</a></h3>
+<p>We provide an <a class="reference external" href="https://github.com/jordanperr/entr_dev_environment.git">example VSCode Dev Container</a> config which can be used to get up and running quickly developing the ENTR platform. This is the recommended method if you use VSCode and are familliar with VSCode Dev Containers.</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/jordanperr/entr_dev_environment.git</span></code>
+<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">entr_dev_environment</span></code>
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span> <span class="pre">--remote</span></code></p>
+<p>Then, open the project with VSCode and follow the prompts to initialize the dev container.</p>
+</section>
+</section>
+<section id="run-entr-on-your-data">
+<h2>Run ENTR on Your Data<a class="headerlink" href="#run-entr-on-your-data" title="Permalink to this heading">¶</a></h2>
+<p>If you’re already using dbt, you should install dbt-openoa in your dbt project and follow the guidelines below for how to build models to
+feed the ENTR transformation pipeline to leverage OpenOA.</p>
+<p>The ENTR Warehouse is an example dbt project available on the ENTR runtime - the easiest way to test out the functionality of the ENTR data stack
+on your own data if you aren’t already using dbt is to load data as a CSV</p>
+<p>Welcome to the ENTR Data Warehouse</p>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this heading">¶</a></h3>
+<p>The ENTR Warehouse is a <a class="reference external" href="https://www.getdbt.com/">dbt</a> project with the goal of providing a common ground of data (formats and transformation methods) upon which renewable energy industry users can build and share analytical applications. Once an industry user integrates his or her data into the generic fact and dimension tables in the ENTR model, he or she will then be able to utilize any associated applications that were built on top of the standard ENTR table schema.</p>
+</section>
+<section id="id2">
+<h3>Getting Started<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://github.com/entralliance/entr_runtime">ENTR Runtime</a> Docker image contains all of the dependencies needed for this tutorial including a standalone Apache Spark warehouse that can be used for running everything contained within the ENTR Warehouse dbt project. See the installation guide <a class="reference external" href="https://entralliance.github.io/install.html">here</a> for how to build and set up the ENTR Runtime.</p>
+</section>
+<section id="entr-data-model">
+<h3>ENTR Data Model<a class="headerlink" href="#entr-data-model" title="Permalink to this heading">¶</a></h3>
+<p><a class="reference external" href="https://docs.getdbt.com/docs/building-a-dbt-project/documentation#overview">dbt docs</a> for the entr_warehouse dbt project can be found at <a class="reference external" href="https://entralliance.github.io/entr_warehouse">https://entralliance.github.io/entr_warehouse</a>. This interface is useful for exploring and understanding the ENTR data model.</p>
+</section>
+<section id="how-to-bring-your-own-data">
+<h3>How to Bring Your Own Data<a class="headerlink" href="#how-to-bring-your-own-data" title="Permalink to this heading">¶</a></h3>
+<p><em>Note:</em> the following steps require at least basic experience with building models in dbt.</p>
+<section id="loading-new-data-from-files">
+<h4>Loading New Data from Files<a class="headerlink" href="#loading-new-data-from-files" title="Permalink to this heading">¶</a></h4>
+<p>The ENTR Runtime image contains pre-built models defined by the ENTR Warehouse based on open-source example data; however, for users wishing to bring their own data, the ENTR Warehouse supports setup of new sources from CSV and other Spark-readable file types by leveraging the <a class="reference external" href="https://github.com/dbt-labs/dbt-external-tables/tree/main">dbt-external-tables</a> package from dbt-labs.</p>
+<ul>
+<li><p>With a clone of this entr_warehouse project mounted to the ENTR Runtime, drop a copy of the file you’d like to process through the ENTR data model into the <code class="docutils literal notranslate"><span class="pre">data/</span></code> directory</p></li>
+<li><p>Within the <code class="docutils literal notranslate"><span class="pre">models/staging/</span></code> directory, write out the source definition for the new file within a YML file in the staging directory using the <a class="reference external" href="https://github.com/dbt-labs/dbt-external-tables/tree/main">dbt-external-tables</a> guides as needed</p>
+<ul>
+<li><p><strong>Note</strong>: the new files can be added to any YML file in the <code class="docutils literal notranslate"><span class="pre">models</span></code> folder but must be mapped under the <code class="docutils literal notranslate"><span class="pre">entr_warehouse</span></code>:
+.. code-block:: yml</p>
+<blockquote>
+<div><p>sources:
+- name: entr_warehouse</p>
+<blockquote>
+<div><dl>
+<dt>tables:</dt><dd><ul>
+<li><p>name: &lt;new table name&gt;
+description: &lt;description of new source table&gt;
+external:</p>
+<blockquote>
+<div><p>location: ‘&lt;path to data file withing the container&gt;’ # e.g. “/home/jovyan/src/entr_warehouse/data/la_haute_borne_plant_data_sample.csv” - this depends on where you’ve mounted the entr_warehouse dir in the container
+using: csv # specify for different file types accordingly
+options:</p>
+<blockquote>
+<div><p>header: ‘true’ # optional but used with the ENTR sample data</p>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">dbt</span> <span class="pre">run-operation</span> <span class="pre">stage_external_sources</span></code> to make the file available as a table in the ENTR runtime Spark warehouse and as a source relation in dbt from which you can start building further transformations</p></li>
+<li><p>See the four files within the <code class="docutils literal notranslate"><span class="pre">data/</span></code> folder and their corresponding source definitions within the <a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/models/staging/entr_sample_data/entr_sample_data.yml">entr_sample_data.yml file</a> for examples</p></li>
+</ul>
+</section>
+<section id="transforming-new-data-to-entr-standard-formats">
+<h4>Transforming New Data to ENTR Standard Formats<a class="headerlink" href="#transforming-new-data-to-entr-standard-formats" title="Permalink to this heading">¶</a></h4>
+<p>Once the new file is set as a source, you will need to transform the data into the standard ENTR fact table format - to build the dbt transformations, you’ll need to define and map the dimensional components of the new data utilizing the standard ENTR dimension table formats.</p>
+<section id="optional-create-an-intermediate-model-to-facilitate-table-reshaping">
+<h5>1. (Optional) Create an Intermediate Model to Facilitate Table Reshaping<a class="headerlink" href="#optional-create-an-intermediate-model-to-facilitate-table-reshaping" title="Permalink to this heading">¶</a></h5>
+<ul class="simple">
+<li><p>You’ll likely notice that the initial step in the transformation of the example sources (files) is just performing type casting (see the examples within the models/staging/entr_sample_data/intermediate directory), e.g. the <a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/models/staging/entr_sample_data/intermediate/int_entr_scada_sample__cast.sql">int_entr_scada_sample__cast</a> model, which just performs type casting on the raw data as a preliminary step</p>
+<ul>
+<li><p>Prepares the data for reshaping/pivoting; we expect this will be a frequently necessary staging step for source files with tags corresponding to data types</p></li>
+<li><p>Assignment of dimensional keys, e.g. <a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/e3eeb3e693349a2a6297274d686ef7f884a5bc18/models/staging/entr_sample_data/intermediate/int_entr_era5_sample__cast.sql#L4-L5">here</a> - see below for further detail</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="establish-link-between-new-facts-and-dimensions">
+<h5>2. Establish Link Between New Facts and Dimensions<a class="headerlink" href="#establish-link-between-new-facts-and-dimensions" title="Permalink to this heading">¶</a></h5>
+<ul class="simple">
+<li><p>For the assignment of dimensional foreign keys, which is required for all ENTR Warehouse fact tables in their current state, the ENTR dimensions must be extended. For example, if the data you’re preparing is not from La Haute Borne, a new plant must be added as a record within the <a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/seeds/seed_asset_plant.csv">seeds/seed_asset_plant</a> dbt CSV seed file in order for the transformations to run properly, and the same goes for the other dimensional data assignments.</p>
+<ul>
+<li><p><strong>Note</strong>: not every field within the dimensions will be useful or used in analyses or transformations, so it may be ok to leave some blank to start depending on your use case</p></li>
+</ul>
+</li>
+<li><p>In addition to extending the seeded ENTR dimensions, it may be useful or necessary to seed mapping files that are specific to a source to facilitate the translation of data into ENTR vernacular; we expect this to most commonly be done for mapping identifiers in the data you bring to ENTR tag IDs within the ENTR dimension</p>
+<ul>
+<li><p>For example, the following files map the example 4 La Haute Borne example data sets’ fields to ENTR tags. These tables are used to join on the ENTR tag IDs to the appropriate fields once the source table has been reshaped/unpivoted to have the original column names in a field</p>
+<ul>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/seeds/seed_la_haute_borne_era5_tag_map.csv">seed_la_haute_borne_era5_tag_map</a></p></li>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/seeds/seed_la_haute_borne_merra2_tag_map.csv">seed_la_haute_borne_merra2_tag_map</a></p></li>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/seeds/seed_la_haute_borne_scada_tag_map.csv">seed_la_haute_borne_scada_tag_map</a></p></li>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/seeds/seed_plant_data_tag_map.csv">seed_plant_data_tag_map</a></p></li>
+</ul>
+</li>
+<li><p><strong>Note</strong>: we don’t yet have standards defined for creating new ENTR tags, but that functionality will be coming soon</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="align-staging-model-with-associated-entr-fact-table-schema">
+<h5>3. Align Staging Model with Associated ENTR Fact Table Schema<a class="headerlink" href="#align-staging-model-with-associated-entr-fact-table-schema" title="Permalink to this heading">¶</a></h5>
+<ul class="simple">
+<li><p>Once all metadata about the new data from the newly loaded file is available, the last staging step is transforming the data into the relevant ENTR generic fact table schema, which can be found in this project’s dbt docs, e.g. <a class="reference external" href="https://entralliance.github.io/entr_warehouse/#!/model/model.entr_warehouse.fct_entr_wtg_scada">fct_entr_wtg_scada</a> for the generic wind turbine SCADA data fact table schema - the staging model <a class="reference external" href="https://github.com/entralliance/entr_warehouse/blob/main/models/staging/entr_sample_data/stg_entr_scada_sample.sql">stg_entr_scada_sample</a> performs the final transformation on the example SCADA data from La Haute Borne to make it match the table schema of the fct_entr_wtg_scada model. The current generic ENTR fact tables are as follows:</p>
+<ul>
+<li><p><a class="reference external" href="https://entralliance.github.io/entr_warehouse/#!/model/model.entr_warehouse.fct_entr_plant_data">fct_entr_plant_data</a></p></li>
+<li><p><a class="reference external" href="https://entralliance.github.io/entr_warehouse/#!/model/model.entr_warehouse.fct_entr_wtg_scada">fct_entr_wtg_scada</a></p></li>
+<li><p><a class="reference external" href="https://entralliance.github.io/entr_warehouse/#!/model/model.entr_warehouse.fct_entr_reanalysis_data">fct_entr_reanalysis_data</a></p>
+<ul>
+<li><p><strong>Note</strong>: this model is a good example showing 2 staged data sets (the ERA5 and MERRA-2 La Haute Borne reanalysis data) flowing into the same generic ENTR fact table for guidance in the following step</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="add-newly-staged-data-to-entr-fact-table">
+<h5>4. Add Newly Staged Data to ENTR Fact Table<a class="headerlink" href="#add-newly-staged-data-to-entr-fact-table" title="Permalink to this heading">¶</a></h5>
+<p>Once a staging model has been created for your new source data that matches the associated generic ENTR fact table schema, you will just need to union that new staging model with the generic ENTR fact table to make the new data ready for consumption by ENTR-based applications. The <a class="reference external" href="https://entralliance.github.io/entr_warehouse/#!/model/model.entr_warehouse.fct_entr_reanalysis_data">fct_entr_reanalysis_data</a> shows how multiple staging models are combined in the generic ENTR reanalysis model.</p>
+</section>
+</section>
+</section>
+<section id="resources">
+<h3>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Learn more about dbt from the <a class="reference external" href="https://docs.getdbt.com/docs/introduction">dbt docs</a></p></li>
+<li><p>Check out the <a class="reference external" href="https://discourse.getdbt.com/">dbt Discourse</a> for commonly asked questions and answers</p></li>
+<li><p>Join the <a class="reference external" href="http://slack.getdbt.com/">dbt Slack chat</a> for live discussions and support</p></li>
+<li><p>Find <a class="reference external" href="https://events.getdbt.com">dbt events</a> near you</p></li>
+<li><p>Check out <a class="reference external" href="https://blog.getdbt.com/">the dbt blog</a> for the latest news on dbt’s development and best practices</p></li>
+</ul>
+</section>
+<section id="running-openoa-on-entr">
+<h3>Running OpenOA on ENTR<a class="headerlink" href="#running-openoa-on-entr" title="Permalink to this heading">¶</a></h3>
+<p>The ENTR Runtime includes example analysis notebooks that demonstrate operational wind plant data analytics use cases using OpenOA with example data stored in the ENTR warehouse.
+The example notebooks are located at /examples in the <a class="reference external" href="https://github.com/entralliance/entr_runtime/tree/dev/docker/workspace/examples">ENTR Runtime Docker workspace</a>.
+All examples use two years of data for the 4-turbine <a class="reference external" href="https://opendata-renewables.engie.com">“La Haute Borne”</a> wind plant.</p>
+</section>
+<section id="running-the-examples">
+<h3>Running the Examples<a class="headerlink" href="#running-the-examples" title="Permalink to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Complete the Installation section and open Jupyter Hub in your web browser.</p></li>
+<li><p>On the left-hand side of Jupter Hub, navigate to: <code class="docutils literal notranslate"><span class="pre">examples</span></code></p></li>
+<li><p>Double click on any example notebook to open it.</p></li>
+</ol>
+</section>
+<section id="list-of-examples">
+<h3>List of Examples<a class="headerlink" href="#list-of-examples" title="Permalink to this heading">¶</a></h3>
+<p>The ENTR runtime contains two example notebooks:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb">Example 1: Introduction to PyENTR and the OpenOA from_entr() constructor</a></p></li>
+<li><p><a class="reference external" href="https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_01_aep_analysis_demo.ipynb">Example 2: Long-term AEP assessment</a></p></li>
+</ul>
+</section>
+<section id="openoa-documentation">
+<h3>OpenOA documentation<a class="headerlink" href="#openoa-documentation" title="Permalink to this heading">¶</a></h3>
+<p>OpenOA documentation is hosted on <a class="reference external" href="https://openoa.readthedocs.io/en/latest/">ReadTheDocs</a>.</p>
+<p>Data are stored and organized in OpenOA using a <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> object. The <code class="docutils literal notranslate"><span class="pre">PlantData</span></code> class uses the <code class="docutils literal notranslate"><span class="pre">plantdata.from_entr</span></code> method from the py-entr package (<a class="reference external" href="https://github.com/entralliance/py-entr/blob/d544a5873f3709c2f5b45f77c1f72d0596be9e34/entr/plantdata.py#LL167C15-L167C15">link to code</a>) to load data into OpenOA from the ENTR Warehouse.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ENTR</a></h1>
+
+
+
+<p class="blurb">Open data standards for clean energy</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=entralliance&repo=entralliance.github.io&type=follow&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">ENTR Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installating-the-entr-runtime">Installating the ENTR Runtime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pull-and-run-the-image">Pull and Run the Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-your-own-image">Building your own Image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#developing-with-the-entr-runtime">Developing with the ENTR Runtime</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#manually-running-entr-in-dev-mode">Manually Running ENTR in Dev Mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-the-warehouse">Updating the Warehouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-topics">Advanced Topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-vscode-dev-container">Using VSCode Dev Container</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#run-entr-on-your-data">Run ENTR on Your Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entr-data-model">ENTR Data Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-bring-your-own-data">How to Bring Your Own Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-openoa-on-entr">Running OpenOA on ENTR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-examples">Running the Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#list-of-examples">List of Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openoa-documentation">OpenOA documentation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_involved.html">Getting Involved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_site.html">Docs Site</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ENTR Foundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/getting_started.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
