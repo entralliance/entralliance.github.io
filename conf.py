@@ -99,6 +99,12 @@ html_static_path = ['_static']
 #     "_external/entr_runtime_readme.md"
 # )
 
+
+urlretrieve (
+    f"https://raw.githubusercontent.com/entralliance/dbt-entr/{DBT_ENTR_GITBRANCH}/README.md",
+    "_external/dbt-entr-readme.md"
+)
+
 urlretrieve (
     f"https://raw.githubusercontent.com/entralliance/entr_warehouse/{ENTR_WAREHOUSE_GITBRANCH}/README.md",
     "_external/entr_warehouse_readme.md"
