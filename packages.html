@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>ENTR Packages &#8212; ENTR 0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="getting_started.html" />
+    <link rel="prev" title="ENTR Overview" href="overview.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <span class="target" id="packages"></span><section id="entr-packages">
+<h1>ENTR Packages<a class="headerlink" href="#entr-packages" title="Permalink to this heading">¶</a></h1>
+<p><span class="raw-html-m2r"><h1 align="center">dbt-entr</h1></span></p>
+<p align="center">
+<img alt="logo" width="20%" src="https://images.squarespace-cdn.com/content/v1/5d2f4cea430e880001ddfba8/1579219580580-2SAK7YKA6CX7P9VK57XT/ENTR+White+Logo_White.png?format=1500w" />
+</p><hr/><p align="center">
+<a href="https://circleci.com/gh/entralliance/dbt-entr/tree/main">
+<img alt="CircleCI" src="https://circleci.com/gh/entralliance/dbt-entr.svg?style=shield"/>
+</a>
+<img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
+</p><p>The ENTR Foundation’s dbt package for standardized warehouse transformations in the renewable energy industry</p>
+<section id="data-warehouse-compatibility">
+<h2>Data Warehouse Compatibility<a class="headerlink" href="#data-warehouse-compatibility" title="Permalink to this heading">¶</a></h2>
+<p>This package has been tested for compatibility with the following warehouse types:</p>
+<ul>
+<li><p>[x] <strong>Postgres</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>Snowflake</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>BigQuery</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg">https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg">https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>Spark/Databricks</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+<p><em>Note:</em> this package may work with other warehouse types not listed above but their compatibility has not been tested.</p>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">¶</a></h2>
+<p>The following project-level variables should be set in your <code class="docutils literal notranslate"><span class="pre">dbt_project.yml</span></code> to specify which models get ingested by the standard ENTR models:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>vars:
+    entr:
+        dim_entr_asset_models: [&lt;list of models to be ingested by the dim_entr_asset dimensional model from this package&gt;]
+        fct_entr_time_series_models: [&lt;list of models to be ingested by the fct_entr_reanalysis_data fact model from this package&gt;]
+</pre></div>
+</div>
+<p>You may also want to override the default column types in the ENTR models by passing a dictionary of column names with the desired data types to override to:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>vars:
+    entr:
+        entr_column_type_overrides: {&lt;column in ENTR models&gt;: &lt;override datatype&gt;}
+</pre></div>
+</div>
+<p>You may also want to change the materialization type (or other properties such as the database or schema) of the standard ENTR models:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>models:
+    entr:
+        +materialized: view
+        dimensions:
+            +materialized: table
+</pre></div>
+</div>
+<p><span class="raw-html-m2r"><h1 align="center">dbt-openoa</h1></span></p>
+<p align="center">
+<a href="https://www.getdbt.com/">
+<img alt="dbt-logo" width="10%" src="https://github.com/entralliance/entralliance.github.io/raw/main/images/dbt-logo.png?" />
+<img alt="openoa-logo" width="20%" src="https://github.com/NREL/OpenOA/raw/develop/Open%20OA%20Final%20Logos/Color/Open%20OA%20Color%20Transparent%20Background.png?format=1500w" />
+</p><p align="center">
+<a href="https://circleci.com/gh/entralliance/dbt-openoa/tree/main">
+<img alt="CircleCI" src="https://circleci.com/gh/entralliance/dbt-openoa.svg?style=shield"/>
+</a>
+<img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"/>
+</p><hr/></section>
+<section id="id1">
+<h2>Data Warehouse Compatibility<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<p>This package has been tested for compatibility with the following warehouse types:</p>
+<ul>
+<li><p>[x] <strong>Postgres</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/postgres-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>Snowflake</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/snowflake-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>BigQuery</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg">https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg">https://raw.githubusercontent.com/elementary-data/elementary/master/static/bigquery-16.svg</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+<li><p>[x] <strong>Spark/Databricks</strong>
+.. image:: <a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png</a></p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png">https://raw.githubusercontent.com/elementary-data/elementary/master/static/databricks-16.png</a></p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</div></blockquote>
+</li>
+</ul>
+<p><em>Note:</em> this package may work with other warehouse types not listed above but their compatibility has not been tested.</p>
+<section id="important-note-about-bigquery">
+<h3>Important note about BigQuery<a class="headerlink" href="#important-note-about-bigquery" title="Permalink to this heading">¶</a></h3>
+<p>Some column names will appear different when materializing this package’s models in BigQuery due to its incompatibility with having “<code class="docutils literal notranslate"><span class="pre">.</span></code>” in field names:</p>
+<ul class="simple">
+<li><p>openoa_curtailment_and_availability</p></li>
+<li><p>openoa_reanalysis</p></li>
+<li><p>openoa_revenue_meter</p></li>
+<li><p>openoa_wtg_scada</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ENTR</a></h1>
+
+
+
+<p class="blurb">Open data standards for clean energy</p>
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=entralliance&repo=entralliance.github.io&type=follow&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">ENTR Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ENTR Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-warehouse-compatibility">Data Warehouse Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Data Warehouse Compatibility</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#important-note-about-bigquery">Important note about BigQuery</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_involved.html">Getting Involved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs_site.html">Docs Site</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, ENTR Foundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.3.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/packages.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
