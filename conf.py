@@ -106,6 +106,11 @@ urlretrieve (
 )
 
 urlretrieve (
+    f"https://raw.githubusercontent.com/entralliance/dbt-openoa/{DBT_OPENOA_GITBRANCH}/README.md",
+    "_external/dbt-openoa-readme.md"
+)
+
+urlretrieve (
     f"https://raw.githubusercontent.com/entralliance/entr_warehouse/{ENTR_WAREHOUSE_GITBRANCH}/README.md",
     "_external/entr_warehouse_readme.md"
 )
