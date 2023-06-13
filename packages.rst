@@ -15,7 +15,7 @@
 ENTR Repositories
 #################
 
-The following repositories are maintained by ENTR as part of the ENTR data stack.
+The following repositories are maintained by ENTR as part of the ENTR data stack. The docs below are composed of the README files for each repo.
 
 ----
 
