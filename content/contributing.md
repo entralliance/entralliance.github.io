@@ -93,14 +93,21 @@ The entr alliance repositories may have automated CI / CD pipelines which trigge
  - For relases: When a new tag with prefix 'v' is created (such as v0.0.1) the container is re-built and pushed to ghcr.io with the specified tag. The "latest" tag is also set to this version.
 
 **Entr Runtime Release Instructions:**
-  - Merge dev into main using the command line.
+  - Create a release branch from the dev branch reflecting the version number.
+```
+git checkout dev
+git checkout -b release/v1.2.3
+```
+  - Update any named versions of packages in the dockerfile, such as "dev" to point to a speciffic tag or commit.
+  - Make sure this builds locally.
+  - Merge the release branch into main using the command line.
 ```
 git checkout main
-git merge develop
+git merge release/v1.2.3
 git push
 ```
-  - Create a tag "v*.*.*" reflecting the version number.
-  - Push the tag to github 
+  - Delete the release branch.
+  - Create a tag "v*.*.*" from main, reflecting the version number, and push the tag to github 
 ```
 git tag -a v1.2.3 -m "Tag messgae for v1.2.3"
 git push origin v1.2.3
