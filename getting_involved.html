@@ -128,15 +128,23 @@ For instructions on running tests, please see the [Readme](testing link).--></se
 </ul>
 <p><strong>Entr Runtime Release Instructions:</strong></p>
 <ul>
-<li><p>Merge dev into main using the command line.</p>
+<li><p>Create a release branch from the dev branch reflecting the version number.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">dev</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">release</span><span class="o">/</span><span class="n">v1</span><span class="mf">.2.3</span>
+</pre></div>
+</div>
+</li>
+<li><p>Update any named versions of packages in the dockerfile, such as “dev” to point to a speciffic tag or commit.</p></li>
+<li><p>Make sure this builds locally.</p></li>
+<li><p>Merge the release branch into main using the command line.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
-<span class="n">git</span> <span class="n">merge</span> <span class="n">develop</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">release</span><span class="o">/</span><span class="n">v1</span><span class="mf">.2.3</span>
 <span class="n">git</span> <span class="n">push</span>
 </pre></div>
 </div>
 </li>
-<li><p>Create a tag “v<em>.</em>.*” reflecting the version number.</p></li>
-<li><p>Push the tag to github</p>
+<li><p>Delete the release branch.</p></li>
+<li><p>Create a tag “v<em>.</em>.*” from main, reflecting the version number, and push the tag to github</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v1</span><span class="mf">.2.3</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Tag messgae for v1.2.3&quot;</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">v1</span><span class="mf">.2.3</span>
 </pre></div>
