@@ -118,6 +118,32 @@ For instructions on running tests, please see the [Readme](testing link).--></se
 <p>ENTR tage names should be of the form {Logical Node}.{Sensor Name}, where the logical node indicates the category to which the data belong (e.g., WMET for meteorological information and WROT for rotor information) and the sensor name describes the specific channel (e.g., HorWdSpd for horizontal wind speed and RotSpd for rotor speed). When possible, for wind energy data, logical nodes and sensor names defined in the IEC 61400-25-2 standard should be used. However, logical nodes and sensor names from other IEC standards (e.g., IEC 61850 - Communication Networks and Systems for Power Utility Automation) can be used as well. For example, the ENTR tag list uses the logical node MMTR from the IEC 61850 standard to represent the revenue meter. If you cannot find an existing logical node or sensor name for a new tag name, you may create a new name, which should be based on existing names as much as possible. For example, to represent reanalysis weather data, the ENTR tag list uses the WMETR logical node, which is based on the existing WMET logical node; to indicate the U and V components of horizontal wind speed, the sensor names HorWdSpdU and HorWdSpdV, which are based on the existing HorWdSpd sensor name, are used.</p>
 <p>When contributing a new tag name to the ENTR tag list, the following fields should be specified: the ENTR tag ID (a globally unique integer key for the tag), the tag subtype ID (if a tag name can correspond to multiple data channels), the ENTR tag name, the tag subtype description (if applicable), the logical node, the sensor name, the full tag name description, and the units.</p>
 </section>
+<section id="releases">
+<h3>Releases:<a class="headerlink" href="#releases" title="Permalink to this heading">¶</a></h3>
+<p>The entr alliance repositories may have automated CI / CD pipelines which trigger builds based on user actions.</p>
+<p><strong>Entr Runtime:</strong></p>
+<ul class="simple">
+<li><p>For development: On any push to dev branch, the container is re-built and pushed to ghcr.io with the “dev” tag.</p></li>
+<li><p>For relases: When a new tag with prefix ‘v’ is created (such as v0.0.1) the container is re-built and pushed to ghcr.io with the specified tag. The “latest” tag is also set to this version.</p></li>
+</ul>
+<p><strong>Entr Runtime Release Instructions:</strong></p>
+<ul>
+<li><p>Merge dev into main using the command line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">develop</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a tag “v<em>.</em>.*” reflecting the version number.</p></li>
+<li><p>Push the tag to github</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">a</span> <span class="n">v1</span><span class="mf">.2.3</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Tag messgae for v1.2.3&quot;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">v1</span><span class="mf">.2.3</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
 </section>
 </section>
 
@@ -157,6 +183,7 @@ For instructions on running tests, please see the [Readme](testing link).--></se
 <li class="toctree-l3"><a class="reference internal" href="#issue-tracking">Issue Tracking</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#code-contributions">Code Contributions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#standard-tag-changes">Standard Tag Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#releases">Releases:</a></li>
 </ul>
 </li>
 </ul>
