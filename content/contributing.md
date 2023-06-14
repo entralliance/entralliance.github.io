@@ -83,3 +83,25 @@ The `dbt-entr` package contains a list of standard tag names ([available here](h
 ENTR tage names should be of the form {Logical Node}.{Sensor Name}, where the logical node indicates the category to which the data belong (e.g., WMET for meteorological information and WROT for rotor information) and the sensor name describes the specific channel (e.g., HorWdSpd for horizontal wind speed and RotSpd for rotor speed). When possible, for wind energy data, logical nodes and sensor names defined in the IEC 61400-25-2 standard should be used. However, logical nodes and sensor names from other IEC standards (e.g., IEC 61850 - Communication Networks and Systems for Power Utility Automation) can be used as well. For example, the ENTR tag list uses the logical node MMTR from the IEC 61850 standard to represent the revenue meter. If you cannot find an existing logical node or sensor name for a new tag name, you may create a new name, which should be based on existing names as much as possible. For example, to represent reanalysis weather data, the ENTR tag list uses the WMETR logical node, which is based on the existing WMET logical node; to indicate the U and V components of horizontal wind speed, the sensor names HorWdSpdU and HorWdSpdV, which are based on the existing HorWdSpd sensor name, are used.
 
 When contributing a new tag name to the ENTR tag list, the following fields should be specified: the ENTR tag ID (a globally unique integer key for the tag), the tag subtype ID (if a tag name can correspond to multiple data channels), the ENTR tag name, the tag subtype description (if applicable), the logical node, the sensor name, the full tag name description, and the units.
+
+## Releases:
+
+The entr alliance repositories may have automated CI / CD pipelines which trigger builds based on user actions. 
+
+**Entr Runtime:**
+ - For development: On any push to dev branch, the container is re-built and pushed to ghcr.io with the "dev" tag.
+ - For relases: When a new tag with prefix 'v' is created (such as v0.0.1) the container is re-built and pushed to ghcr.io with the specified tag. The "latest" tag is also set to this version.
+
+**Entr Runtime Release Instructions:**
+  - Merge dev into main using the command line.
+```
+git checkout main
+git merge develop
+git push
+```
+  - Create a tag "v*.*.*" reflecting the version number.
+  - Push the tag to github 
+```
+git tag -a v1.2.3 -m "Tag messgae for v1.2.3"
+git push origin v1.2.3
+```
