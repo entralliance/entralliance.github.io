@@ -69,6 +69,7 @@ The ENTR runtime contains two example notebooks:
 
 * `Example 1: Introduction to PyENTR and the OpenOA from_entr() constructor <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_00_intro_to_pyentr.ipynb>`_
 * `Example 2: Long-term AEP assessment <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_01_aep_analysis_demo.ipynb>`_
+* `Example 3: Static Yaw Misalignment Detection <https://github.com/entralliance/entr_runtime/blob/dev/docker/workspace/examples/entr_02_static_yaw_misalignment_demo.ipynb>`_
 
 ..
    TODO: Use nbsphinx to include notebooks directly in documentation once Pandoc issue is fixed for the github action
