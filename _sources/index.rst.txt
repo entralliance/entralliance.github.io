@@ -36,7 +36,6 @@ Table of Contents
    :maxdepth: 3
 
    overview.rst
-   packages.rst
    getting_started.rst
    getting_involved.rst
    docs_site.rst
