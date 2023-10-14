@@ -39,6 +39,7 @@ Table of Contents
    getting_started.rst
    getting_involved.rst
    docs_site.rst
+   CODE_OF_CONDUCT.md
 
 
 
