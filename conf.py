@@ -22,8 +22,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # default "dev" external repos/branches
-# TODO: default to main once repos are updated
-default_branch = os.getenv("DEFAULT_GITBRANCH") or 'dev'
+default_branch = os.getenv("DEFAULT_GITBRANCH") or 'main'
 OPENOA_GITREPO = os.getenv("OPENOA_GITREPO") or 'entralliance/OpenOA'
 OPENOA_GITBRANCH = os.getenv("OPENOA_GITBRANCH") or default_branch
 ENTR_RUNTIME_GITBRANCH = os.getenv("ENTR_RUNTIME_GITBRANCH") or default_branch
