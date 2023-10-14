@@ -20,6 +20,28 @@ This documentation can be used to learn more about the technology built by the E
 
 If interested visit `<https://www.entrfoundation.org>`_ to find out more about ENTR, or navigate to the sections below about how to get started on using the ENTR data stack and how to get involved with the ENTR community.
 
+ENTR Mission, Vision, and Values
+================================
+
+Mission
+-------
+
+To supply the renewable energy industry and global climate stakeholders with a venue for community development of open source data standards, tools and analytics
+
+Vision
+------
+
+To accelerate the transition to renewable energy and ensure rapid global decarbonization
+
+Values
+------
+   - **Community**: We foster collaboration of a diverse and inclusive community in the renewable energy industry
+   - **Trust**: We help build trust between different renewable energy industry stakeholders
+   - **Open Source**: We are committed to promoting an open digital commons for renewable energy
+   - **Innovation**: We create an ecosystem that enables innovators to bring ideas to market (life)
+   - **Digitalization**: We ensure interoperability and usability of data and code across organizations through FAIR data practices and reproducible code.
+   - **Stakeholder Centricity**: We serve the needs of the energy and climate community
+
 The ENTR Data Stack
 ===================
 
